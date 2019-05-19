@@ -42,3 +42,12 @@ export const NavLinks = styled.a`
     color: orange;
   }
 `;
+
+//Container*****************************
+
+export const Container = styled.div`
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+`;
