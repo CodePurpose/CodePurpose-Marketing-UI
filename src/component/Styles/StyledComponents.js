@@ -1,4 +1,8 @@
-.navBar {
+import styled from "styled-components";
+
+//NavBar
+
+export const Nav = styled.nav`
   position: fixed;
   top: 0;
   left: 0;
@@ -10,26 +14,31 @@
   color: white;
   background: black;
   box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.5);
-}
+`;
 
-.navTitle {
+export const NavTitle = styled.p`
   align-self: center;
   font-size: 2rem;
   margin-left: 2rem;
-}
+`;
 
-.navItems ul {
+export const NavItems = styled.ul`
   display: flex;
   flex-direction: row;
   list-style: none;
   margin-right: 2rem;
-}
-.navItem a {
+`;
+
+export const NavLinks = styled.a`
   text-decoration: none;
   color: white;
   font-size: 1rem;
-}
-.navItem a:hover,
-.navItem a:active {
-  color: orange;
-}
+
+  :hover {
+    color: orange;
+  }
+
+  :active {
+    color: orange;
+  }
+`;

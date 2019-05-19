@@ -1,23 +1,19 @@
 import React from "react";
-import "./NavBar.css";
+import { Nav, NavItems, NavLinks, NavTitle } from "../Styles/StyledComponents";
 
 const NavBar = () => (
-  <nav className="navBar">
-    <div className="navTitle">
-      <p>CodePurpose</p>
-    </div>
-    <div className="navItems">
-      <ul>
-        <li className="navItem">
-          <a href="/">About</a>
-        </li>
+  <Nav>
+    <NavTitle>CodePurpose</NavTitle>
+    <NavItems>
+      <li>
+        <NavLinks href="/">About</NavLinks>
+      </li>
 
-        <li className="navItem" style={{ paddingLeft: "10px" }}>
-          <a href="/">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+      <li style={{ paddingLeft: "10px" }}>
+        <NavLinks href="/">Contact</NavLinks>
+      </li>
+    </NavItems>
+  </Nav>
 );
 
 export default NavBar;
