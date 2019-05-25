@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 //NavBar
 
 export const Nav = styled.nav`
@@ -33,6 +32,7 @@ export const NavLinks = styled.a`
   text-decoration: none;
   color: white;
   font-size: 1rem;
+  padding-left: 10px;
 
   :hover {
     color: orange;

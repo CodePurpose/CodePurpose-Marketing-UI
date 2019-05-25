@@ -1,6 +1,6 @@
 import React from "react";
-import NavBar from "./component/NavBar/NavBar";
-import Title from "./component/Title/Title";
+import NavBar from "./component/NavBar";
+import Title from "./component/Title";
 
 function App() {
   return (

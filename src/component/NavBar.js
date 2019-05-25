@@ -6,10 +6,18 @@ const NavBar = () => (
     <NavTitle>CodePurpose</NavTitle>
     <NavItems>
       <li>
+        <NavLinks href="/">Home</NavLinks>
+      </li>
+      <li>
         <NavLinks href="/">About</NavLinks>
       </li>
-
-      <li style={{ paddingLeft: "10px" }}>
+      <li>
+        <NavLinks href="/">Blog</NavLinks>
+      </li>
+      <li>
+        <NavLinks href="/">Careers</NavLinks>
+      </li>
+      <li>
         <NavLinks href="/">Contact</NavLinks>
       </li>
     </NavItems>
