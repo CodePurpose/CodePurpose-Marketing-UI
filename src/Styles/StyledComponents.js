@@ -1,6 +1,9 @@
 import styled from "styled-components";
-//NavBar
 
+// colors
+const darkerGrey = "#34373a";
+
+//NavBar
 export const Nav = styled.nav`
   position: fixed;
   top: 0;
@@ -59,6 +62,53 @@ export const MenuIcon = styled.a`
   }
 `;
 
+export const MobileMenu = styled.div`
+  height: 250px;
+  box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.5);
+  background: ${darkerGrey};
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 200;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-out;
+
+  ${props =>
+    props.open
+      ? `
+      transform: translateY(0);
+    `
+      : null}
+`;
+
+export const BackdropStyle = styled.div`
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+`;
+
+export const MenuList = styled.li`
+  padding-top: 0.5em;
+`;
+
+export const MenuItem = styled.a`
+  text-decoration: none;
+  color: white;
+  font-size: 1.5em;
+  :hover {
+    color: orange;
+  }
+
+  :active {
+    color: orange;
+  }
+`;
+
 // Footer styles
 
 export const FooterBackground = styled.div`
@@ -96,7 +146,7 @@ export const List = styled.ul`
     padding-bottom: 1em;
   }
 `;
-
+//used in footer &
 export const Item = styled.a`
   text-decoration: none;
   color: white;
