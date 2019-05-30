@@ -26,6 +26,10 @@ export const NavItems = styled.ul`
   flex-direction: row;
   list-style: none;
   margin-right: 2rem;
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    display: none;
+  }
 `;
 
 export const NavLinks = styled.a`
@@ -43,6 +47,18 @@ export const NavLinks = styled.a`
   }
 `;
 
+export const MenuIcon = styled.a`
+  align-self: center;
+  margin-right: 1em;
+  text-decoration: none;
+  :active {
+    color: orange;
+  }
+  @media (min-width: 480px) {
+    display: none;
+  }
+`;
+
 // Footer styles
 
 export const FooterBackground = styled.div`
@@ -57,7 +73,7 @@ export const FooterContainer = styled.div`
   margin-left: auto;
   margin-right: auto;
 
-  @media (min-width: 375px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 480px) {
     display: flex;
     flex-direction: column;
     margin-left: 1em;
@@ -74,7 +90,7 @@ export const List = styled.ul`
   list-style: none;
   padding-top: 2em;
 
-  @media (min-width: 375px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 480px) {
     margin: 0;
     padding-top: 0em;
     padding-bottom: 1em;

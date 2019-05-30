@@ -1,5 +1,13 @@
 import React from "react";
-import { Nav, NavItems, NavLinks, NavTitle } from "../Styles/StyledComponents";
+import {
+  Nav,
+  NavItems,
+  NavLinks,
+  NavTitle,
+  MenuIcon
+} from "../Styles/StyledComponents";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAlignJustify } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = () => (
   <Nav>
@@ -21,6 +29,9 @@ const NavBar = () => (
         <NavLinks href="/">Contact</NavLinks>
       </li>
     </NavItems>
+    <MenuIcon>
+      <FontAwesomeIcon icon={faAlignJustify} size="2x" />
+    </MenuIcon>
   </Nav>
 );
 
