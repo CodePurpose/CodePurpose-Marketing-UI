@@ -101,3 +101,9 @@ export const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
 `;
+
+export const SmallContainer = styled.div`
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+`;
