@@ -101,3 +101,17 @@ export const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
 `;
+
+export const Card = styled.div`
+  width: 300px;
+  height: 400px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+  :hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+  }
+`;
+
+export const CardContent = styled.div`
+  padding: 1em 1.25em;
+`;
