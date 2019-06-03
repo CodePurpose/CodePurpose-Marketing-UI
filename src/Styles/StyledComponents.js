@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-// colors
+// colors*********************************
 const darkerGrey = "#34373a";
 
-//NavBar
+//NavBar**********************************
 export const Nav = styled.nav`
   position: fixed;
   top: 0;
@@ -109,7 +109,7 @@ export const MenuItem = styled.a`
   }
 `;
 
-// Footer styles
+// Footer styles*****************************
 
 export const FooterBackground = styled.div`
   background: black;
@@ -160,7 +160,7 @@ export const Item = styled.a`
     color: orange;
   }
 `;
-//Container*****************************
+//Containers***********************************
 
 export const Container = styled.div`
   max-width: 1320px;
