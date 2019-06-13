@@ -2,7 +2,12 @@ import styled from "styled-components";
 
 // colors*********************************
 const darkerGrey = "#34373a";
+const primaryLight = "#ffffff";
 
+//text************************************
+export const MetaText = styled.p`
+  color: #00000099;
+`;
 //NavBar**********************************
 export const Nav = styled.nav`
   position: fixed;
@@ -169,8 +174,9 @@ export const Container = styled.div`
 `;
 
 export const Card = styled.div`
+  background: ${primaryLight}
   width: 300px;
-  height: 400px;
+  height: 350px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
   transition: 0.3s;
   :hover {
