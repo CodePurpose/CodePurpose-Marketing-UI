@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // colors*********************************
 const darkerGrey = "#34373a";
@@ -40,7 +41,9 @@ export const NavItems = styled.ul`
   }
 `;
 
-export const NavLinks = styled.a`
+export const NavLinks = styled.a`const FontAwesomeIcon = ({ className, children }) => (
+  <svg className={className}>{children}</svg>
+);
   text-decoration: none;
   color: white;
   font-size: 1rem;
@@ -182,8 +185,25 @@ export const Card = styled.div`
   :hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
   }
+  @media (max-width: 480px) {
+    height: auto;
+  }
 `;
 
 export const CardContent = styled.div`
   padding: 1em 1.25em;
+`;
+
+export const CardGroup = styled.div`
+  display: flex;
+  justify-content: space-around;
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
+`;
+
+export const IconMobile = styled(FontAwesomeIcon)`
+  @media (max-width: 480px) {
+    transform: rotate(90deg);
+  }
 `;
