@@ -5,7 +5,8 @@ import {
   CardContent,
   CardGroup,
   MetaText,
-  IconMobile
+  IconMobile,
+  IconGroup
 } from "../Styles/StyledComponents";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -48,7 +49,7 @@ class ProductionModel extends React.Component {
   };
 
   render() {
-    const { mobile } = this.state;
+    // const { mobile } = this.state;
 
     return (
       <div style={{ background: primary }}>
@@ -71,10 +72,16 @@ class ProductionModel extends React.Component {
                 </div>
               </CardContent>
             </Card>
-            {mobile
+            {/* {mobile
               ? this.checkMobile(faArrowRight)
-              : this.checkMobile(faArrowRight)}
-            <IconMobile icon={faArrowRight} />
+              : this.checkMobile(faArrowRight)} */}
+            <IconMobile
+              icon={faArrowRight}
+              type="right"
+              size="3x"
+              style={{ alignSelf: "center" }}
+              color={secondary}
+            />
             {/* <FontAwesomeIcon
               icon={arrow ? faArrowDown : faArrowRight}
               size="3x"
@@ -96,17 +103,23 @@ class ProductionModel extends React.Component {
               </CardContent>
             </Card>
           </CardGroup>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-around",
-              paddingTop: "2em",
-              paddingBottom: "2em"
-            }}
-          >
+          <IconGroup>
             <FontAwesomeIcon icon={faArrowUp} size="3x" color={secondary} />
             <h3>We iterate through each step until we get it right for you.</h3>
             <FontAwesomeIcon icon={faArrowDown} size="3x" color={secondary} />
+          </IconGroup>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column"
+            }}
+          >
+            <IconMobile
+              icon={faArrowDown}
+              size="3x"
+              color={secondary}
+              type="mobile"
+            />
           </div>
           <CardGroup>
             <Card>
@@ -123,8 +136,15 @@ class ProductionModel extends React.Component {
                 </div>
               </CardContent>
             </Card>
-            <FontAwesomeIcon
+            {/* <FontAwesomeIcon
               icon={faArrowLeft}
+              size="3x"
+              style={{ alignSelf: "center" }}
+              color={secondary}
+            /> */}
+            <IconMobile
+              icon={faArrowLeft}
+              type="left"
               size="3x"
               style={{ alignSelf: "center" }}
               color={secondary}

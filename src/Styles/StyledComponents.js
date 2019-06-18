@@ -187,6 +187,7 @@ export const Card = styled.div`
   }
   @media (max-width: 480px) {
     height: auto;
+    align-self: center;
   }
 `;
 
@@ -202,8 +203,33 @@ export const CardGroup = styled.div`
   }
 `;
 
+//icons********************************************
 export const IconMobile = styled(FontAwesomeIcon)`
+  ${props => {
+    if (props.type === "mobile") {
+      return `display: none;`;
+    }
+  }}
   @media (max-width: 480px) {
-    transform: rotate(90deg);
+    ${props => {
+      if (props.type === "right") {
+        return `transform: rotate(90deg);`;
+      } else if (props.type === "left") {
+        return `transform: rotate(-90deg);`;
+      } else if (props.type === "mobile") {
+        return `display: block; align-self: center`;
+      }
+    }}
+  }
+`;
+
+export const IconGroup = styled.div`
+  display: flex;
+  justify-content: space-around;
+  padding-top: 2em;
+  padding-bottom: 2em;
+
+  @media (max-width: 480px) {
+    display: none;
   }
 `;
