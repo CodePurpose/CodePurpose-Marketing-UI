@@ -2,8 +2,10 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // colors*********************************
-const darkerGrey = "#34373a";
 const primaryLight = "#ffffff";
+const textPrimary = "#000000";
+const primary = "#fafafa";
+const secondary = "#00bcd4";
 
 //text************************************
 export const Text = styled.p`
@@ -20,8 +22,8 @@ export const Nav = styled.nav`
   flex-direction: row;
   justify-content: space-between;
   z-index: 1;
-  color: white;
-  background: black;
+  color: ${textPrimary};
+  background: ${primary};
   box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.5);
 `;
 
@@ -46,16 +48,16 @@ export const NavLinks = styled.a`const FontAwesomeIcon = ({ className, children 
   <svg className={className}>{children}</svg>
 );
   text-decoration: none;
-  color: white;
+  color: ${textPrimary};
   font-size: 1rem;
   padding-left: 10px;
 
   :hover {
-    color: orange;
+    color: ${secondary};
   }
 
   :active {
-    color: orange;
+    color: ${secondary};
   }
 `;
 
@@ -63,8 +65,9 @@ export const MenuIcon = styled.a`
   align-self: center;
   margin-right: 1em;
   text-decoration: none;
+  color: ${textPrimary};
   :active {
-    color: orange;
+    color: ${secondary};
   }
   @media (min-width: 480px) {
     display: none;
@@ -74,13 +77,13 @@ export const MenuIcon = styled.a`
 export const MobileMenu = styled.div`
   height: 250px;
   box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.5);
-  background: ${darkerGrey};
+  background: ${primary};
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 200;
-  transform: translateY(-100%);
+  transform: translateY(-105%);
   transition: transform 0.3s ease-out;
 
   ${props =>
@@ -97,7 +100,7 @@ export const BackdropStyle = styled.div`
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.3);
   z-index: 100;
 `;
 
@@ -107,22 +110,26 @@ export const MenuList = styled.li`
 
 export const MenuItem = styled.a`
   text-decoration: none;
-  color: white;
+  color: ${textPrimary};
   font-size: 1.5em;
   :hover {
-    color: orange;
+    color: ${secondary};
   }
 
   :active {
-    color: orange;
+    color: ${secondary};
   }
 `;
 
 // Footer styles*****************************
 
 export const FooterBackground = styled.div`
-  background: black;
-  height: 250px;
+  background: ${primary};
+  height: 175px;
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    height: 250px;
+  }
 `;
 
 export const FooterContainer = styled.div`
@@ -158,15 +165,15 @@ export const List = styled.ul`
 //used in footer &
 export const Item = styled.a`
   text-decoration: none;
-  color: white;
+  color: ${textPrimary};
   font-size: 1rem;
 
   :hover {
-    color: orange;
+    color: ${secondary};
   }
 
   :active {
-    color: orange;
+    color: ${secondary};
   }
 `;
 //Containers***********************************
