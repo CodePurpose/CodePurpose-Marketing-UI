@@ -6,10 +6,12 @@ import {
   Item
 } from "../Styles/StyledComponents";
 
+const textPrimary = "#000000";
+
 const styles = {
   title: {
     fontSize: "2em",
-    color: "white"
+    color: `${textPrimary}`
   }
 };
 
@@ -20,7 +22,7 @@ const Footer = () => {
         <div style={styles.title}>
           <p>CodePurpose</p>
         </div>
-        <div style={{ display: "flex", color: "white" }}>
+        <div style={{ display: "flex", color: `${textPrimary}` }}>
           <List>
             <li>
               <Item>Home</Item>

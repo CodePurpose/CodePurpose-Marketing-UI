@@ -1,6 +1,11 @@
 import styled from "styled-components";
-//NavBar
 
+// colors
+const textPrimary = "#000000";
+const primary = "#fafafa";
+const secondary = "#00bcd4";
+
+//NavBar
 export const Nav = styled.nav`
   position: fixed;
   top: 0;
@@ -10,8 +15,8 @@ export const Nav = styled.nav`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  color: white;
-  background: black;
+  color: ${textPrimary};
+  background: ${primary};
   box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.5);
 `;
 
@@ -26,28 +31,96 @@ export const NavItems = styled.ul`
   flex-direction: row;
   list-style: none;
   margin-right: 2rem;
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    display: none;
+  }
 `;
 
 export const NavLinks = styled.a`
   text-decoration: none;
-  color: white;
+  color: ${textPrimary};
   font-size: 1rem;
   padding-left: 10px;
 
   :hover {
-    color: orange;
+    color: ${secondary};
   }
 
   :active {
-    color: orange;
+    color: ${secondary};
+  }
+`;
+
+export const MenuIcon = styled.a`
+  align-self: center;
+  margin-right: 1em;
+  text-decoration: none;
+  color: ${textPrimary};
+  :active {
+    color: ${secondary};
+  }
+  @media (min-width: 480px) {
+    display: none;
+  }
+`;
+
+export const MobileMenu = styled.div`
+  height: 250px;
+  box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.5);
+  background: ${primary};
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 200;
+  transform: translateY(-105%);
+  transition: transform 0.3s ease-out;
+
+  ${props =>
+    props.open
+      ? `
+      transform: translateY(0);
+    `
+      : null}
+`;
+
+export const BackdropStyle = styled.div`
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 100;
+`;
+
+export const MenuList = styled.li`
+  padding-top: 0.5em;
+`;
+
+export const MenuItem = styled.a`
+  text-decoration: none;
+  color: ${textPrimary};
+  font-size: 1.5em;
+  :hover {
+    color: ${secondary};
+  }
+
+  :active {
+    color: ${secondary};
   }
 `;
 
 // Footer styles
 
 export const FooterBackground = styled.div`
-  background: black;
-  height: 250px;
+  background: ${primary};
+  height: 175px;
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    height: 250px;
+  }
 `;
 
 export const FooterContainer = styled.div`
@@ -57,7 +130,7 @@ export const FooterContainer = styled.div`
   margin-left: auto;
   margin-right: auto;
 
-  @media (min-width: 375px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 480px) {
     display: flex;
     flex-direction: column;
     margin-left: 1em;
@@ -74,24 +147,24 @@ export const List = styled.ul`
   list-style: none;
   padding-top: 2em;
 
-  @media (min-width: 375px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 480px) {
     margin: 0;
     padding-top: 0em;
     padding-bottom: 1em;
   }
 `;
-
+//used in footer &
 export const Item = styled.a`
   text-decoration: none;
-  color: white;
+  color: ${textPrimary};
   font-size: 1rem;
 
   :hover {
-    color: orange;
+    color: ${secondary};
   }
 
   :active {
-    color: orange;
+    color: ${secondary};
   }
 `;
 //Container*****************************
