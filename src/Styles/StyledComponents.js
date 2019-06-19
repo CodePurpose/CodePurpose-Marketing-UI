@@ -6,7 +6,7 @@ const darkerGrey = "#34373a";
 const primaryLight = "#ffffff";
 
 //text************************************
-export const MetaText = styled.p`
+export const Text = styled.p`
   color: #00000099;
 `;
 //NavBar**********************************
@@ -19,6 +19,7 @@ export const Nav = styled.nav`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  z-index: 1;
   color: white;
   background: black;
   box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.5);
@@ -197,7 +198,7 @@ export const CardContent = styled.div`
 
 export const CardGroup = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   @media (max-width: 480px) {
     flex-direction: column;
   }
@@ -211,6 +212,8 @@ export const IconMobile = styled(FontAwesomeIcon)`
     }
   }}
   @media (max-width: 480px) {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     ${props => {
       if (props.type === "right") {
         return `transform: rotate(90deg);`;
@@ -225,11 +228,20 @@ export const IconMobile = styled(FontAwesomeIcon)`
 
 export const IconGroup = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding-top: 2em;
   padding-bottom: 2em;
 
   @media (max-width: 480px) {
     display: none;
+  }
+`;
+
+export const Mobile = styled.div`
+  display: none;
+
+  @media (max-width: 480px) {
+    display: block;
+    margin: 1em;
   }
 `;
