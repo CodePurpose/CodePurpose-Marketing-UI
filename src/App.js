@@ -2,6 +2,10 @@ import React from "react";
 import NavBar from "./component/NavBar";
 import Title from "./component/Title";
 import Footer from "./component/Footer";
+import HireUs from "./component/HireUs";
+import AboutUs from "./component/AboutUs";
+import Discussion from "./component/Discussion";
+import Careers from "./component/Careers";
 
 const styles = {
   body: {
@@ -23,6 +27,10 @@ function App() {
         <NavBar />
         <div style={styles.content}>
           <Title />
+          <HireUs />
+          <AboutUs />
+          <Discussion />
+          <Careers />
         </div>
       </div>
       <Footer />
