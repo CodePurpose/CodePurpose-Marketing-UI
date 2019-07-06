@@ -1,11 +1,17 @@
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-// colors
+// colors*********************************
+const primaryLight = "#ffffff";
 const textPrimary = "#000000";
 const primary = "#fafafa";
 const secondary = "#00bcd4";
 
-//NavBar
+//text************************************
+export const Text = styled.p`
+  color: #00000099;
+`;
+//NavBar**********************************
 export const Nav = styled.nav`
   position: fixed;
   top: 0;
@@ -15,6 +21,7 @@ export const Nav = styled.nav`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  z-index: 1;
   color: ${textPrimary};
   background: ${primary};
   box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.5);
@@ -37,7 +44,9 @@ export const NavItems = styled.ul`
   }
 `;
 
-export const NavLinks = styled.a`
+export const NavLinks = styled.a`const FontAwesomeIcon = ({ className, children }) => (
+  <svg className={className}>{children}</svg>
+);
   text-decoration: none;
   color: ${textPrimary};
   font-size: 1rem;
@@ -112,7 +121,7 @@ export const MenuItem = styled.a`
   }
 `;
 
-// Footer styles
+// Footer styles*****************************
 
 export const FooterBackground = styled.div`
   background: ${primary};
@@ -167,10 +176,79 @@ export const Item = styled.a`
     color: ${secondary};
   }
 `;
-//Container*****************************
+//Containers***********************************
 
 export const Container = styled.div`
   max-width: 1320px;
   margin-left: auto;
   margin-right: auto;
+`;
+
+export const Card = styled.div`
+  background: ${primaryLight}
+  width: 300px;
+  height: 350px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+  :hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+  }
+  @media (max-width: 480px) {
+    height: auto;
+    align-self: center;
+  }
+`;
+
+export const CardContent = styled.div`
+  padding: 1em 1.25em;
+`;
+
+export const CardGroup = styled.div`
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
+`;
+
+//icons********************************************
+export const IconMobile = styled(FontAwesomeIcon)`
+  ${props => {
+    if (props.type === "mobile") {
+      return `display: none;`;
+    }
+  }}
+  @media (max-width: 480px) {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    ${props => {
+      if (props.type === "right") {
+        return `transform: rotate(90deg);`;
+      } else if (props.type === "left") {
+        return `transform: rotate(-90deg);`;
+      } else if (props.type === "mobile") {
+        return `display: block; align-self: center`;
+      }
+    }}
+  }
+`;
+
+export const IconGroup = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2em;
+  padding-bottom: 2em;
+
+  @media (max-width: 480px) {
+    display: none;
+  }
+`;
+
+export const Mobile = styled.div`
+  display: none;
+
+  @media (max-width: 480px) {
+    display: block;
+    margin: 1em;
+  }
 `;

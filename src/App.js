@@ -6,6 +6,7 @@ import HireUs from "./component/HireUs";
 import AboutUs from "./component/AboutUs";
 import Discussion from "./component/Discussion";
 import Careers from "./component/Careers";
+import ProductionModel from "./component/ProductionModel";
 
 const styles = {
   body: {
@@ -27,6 +28,7 @@ function App() {
         <NavBar />
         <div style={styles.content}>
           <Title />
+          <ProductionModel />
           <HireUs />
           <AboutUs />
           <Discussion />
