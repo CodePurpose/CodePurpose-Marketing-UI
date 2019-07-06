@@ -2,8 +2,7 @@ import React from "react";
 import {
   FooterContainer,
   FooterBackground,
-  List,
-  Item
+  List
 } from "../Styles/StyledComponents";
 
 const textPrimary = "#000000";
@@ -25,28 +24,8 @@ const Footer = () => {
         <div style={{ display: "flex", color: `${textPrimary}` }}>
           <List>
             <li>
-              <Item>Home</Item>
-            </li>
-            <li>
-              <Item>Careers</Item>
-            </li>
-            <li>
-              <Item>Blog</Item>
-            </li>
-            <li>
-              <Item>About</Item>
-            </li>
-          </List>
-          <List>
-            <li>Contact</li>
-            <li>
-              <Item>Phone: ###-###-####</Item>
-            </li>
-            <li>
-              <Item>Email: email@email.com</Item>
-            </li>
-            <li>
-              <Item>Location: Address</Item>
+              Contact:{" "}
+              <a href="mailto:admin@codepurpose.io">admin@codepurpose.io</a>
             </li>
           </List>
         </div>

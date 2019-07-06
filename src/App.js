@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "./component/NavBar";
 import Title from "./component/Title";
 import Footer from "./component/Footer";
+import ProductionModel from "./component/ProductionModel";
 
 const styles = {
   body: {
@@ -23,6 +24,7 @@ function App() {
         <NavBar />
         <div style={styles.content}>
           <Title />
+          <ProductionModel />
         </div>
       </div>
       <Footer />
