@@ -7,6 +7,7 @@ import AboutUs from "./component/AboutUs";
 import Discussion from "./component/Discussion";
 import Careers from "./component/Careers";
 import ProductionModel from "./component/ProductionModel";
+import CPOffer from "./component/CPOffer";
 
 const styles = {
   body: {
@@ -28,6 +29,7 @@ function App() {
         <NavBar />
         <div style={styles.content}>
           <Title />
+          <CPOffer />
           <ProductionModel />
           <HireUs />
           <AboutUs />
