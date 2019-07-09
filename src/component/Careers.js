@@ -12,7 +12,7 @@ const styles = {
   },
   backgroundStyle: {
     background: primary,
-    paddingBottom: "1em"
+    paddingBottom: "2em"
   }
 };
 
@@ -21,9 +21,9 @@ const Careers = () => {
     <div style={styles.backgroundStyle}>
       <Container style={styles.containerStyle}>
         <h1 style={{ color: secondary }}>CAREERS</h1>
-        <h3>EVERY DAY SHOULD BE MEANINGFUL</h3>
+        <h3 style={{ marginTop: "0" }}>EVERY DAY SHOULD BE MEANINGFUL</h3>
         <TextContainer style={{ alignSelf: "center" }}>
-          <Text>
+          <Text style={{ marginTop: "0" }}>
             By cutting out the overused, outdated model of hiring workers from
             the same pipeline we open the door to growth. Forget becoming
             another cog. Come to work and feel comfortable demonstrating your

@@ -20,9 +20,9 @@ const AboutUs = () => (
   <div style={styles.backgroundStyle}>
     <Container style={styles.containerStyle}>
       <h1 style={{ color: secondary }}>ABOUT US</h1>
-      <h3>WHO ARE WE</h3>
+      <h3 style={{ marginTop: "0" }}>WHO ARE WE</h3>
       <TextContainer style={{ alignSelf: "center" }}>
-        <Text>
+        <Text style={{ marginTop: "0" }}>
           We are a group of innovators, developers, and moonlighters pushing for
           change in an industry lacking inclusion. We believe diversity is worth
           the investment. This is why we stand by the principle of identity

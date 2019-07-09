@@ -25,7 +25,7 @@ const HireUs = () => (
     <Container style={styles.containerStyle}>
       <h3>Are you looking to hire your own team of engineers?</h3>
       <TextContainer style={{ alignSelf: "center" }}>
-        <p>
+        <p style={{ marginTop: "0" }}>
           Our solutions extend to more than just our custom software.
           CodePurpose was founded on the principle of innovation and
           opportunity. We provide top-quality engineers looking to fill your
