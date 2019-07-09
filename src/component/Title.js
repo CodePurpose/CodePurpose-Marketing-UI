@@ -4,8 +4,8 @@ import background from "../images/backgroundOne.jpg";
 
 const styles = {
   backgroundStyle: {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.7)), url(${background})`,
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)), url(${background})`,
     backgroundSize: "cover",
     backgroundPosition: "center center",
     backgroundRepeat: "no-repeat",

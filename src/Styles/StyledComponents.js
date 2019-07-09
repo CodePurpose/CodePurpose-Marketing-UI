@@ -2,14 +2,24 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // colors*********************************
-const primaryLight = "#ffffff";
-const textPrimary = "#000000";
 const primary = "#fafafa";
+const primaryLight = "#ffffff";
+// const primaryDark = "#c7c7c7";
+
 const secondary = "#00bcd4";
+// const secondaryDark = "#008ba3";
+
+const textPrimary = "#000000";
 
 //text************************************
 export const Text = styled.p`
   color: #00000099;
+`;
+
+export const TextContainer = styled.div`
+  max-width: 700px;
+  margen-left: auto;
+  margen-right: auto;
 `;
 //NavBar**********************************
 export const Nav = styled.nav`
@@ -124,7 +134,7 @@ export const MenuItem = styled.a`
 // Footer styles*****************************
 
 export const FooterBackground = styled.div`
-  background: ${primary};
+  background: ${primaryLight};
   height: 175px;
 
   @media (min-width: 320px) and (max-width: 480px) {
