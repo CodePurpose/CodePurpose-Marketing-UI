@@ -1,35 +1,54 @@
-import React from "react";
-import NavBar from "./component/NavBar";
-import Title from "./component/Title";
-import Footer from "./component/Footer";
-import ProductionModel from "./component/ProductionModel";
+import React, { Component } from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from "react-router-dom";
+import Login from "./screens/login";
+import Admin from "./screens/admin";
+import Marketing from "./screens/marketing";
+import Firebase from "./lib/firebase";
 
-const styles = {
-  body: {
-    display: "flex",
-    flexDirection: "column",
-    minHeight: "100vh",
-    width: "100%"
-  },
-  content: {
-    flex: "1 0 auto",
-    width: "100%"
-  }
-};
-
-function App() {
-  return (
-    <div>
-      <div style={styles.body}>
-        <NavBar />
-        <div style={styles.content}>
-          <Title />
-          <ProductionModel />
-        </div>
-      </div>
-      <Footer />
-    </div>
-  );
+function isAuthenticated() {
+  // TODO make this evaluate something
+  return true;
 }
 
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Firebase />
+        <Router>
+          <Switch>
+            <Route exact path="/" component={Marketing} />
+            <Route exact path="/login" component={Login} />
+            <PrivateRoute exact path="/admin" component={Admin} />
+          </Switch>
+        </Router>
+      </div>
+    );
+  }
+}
+
+const PrivateRoute = ({
+  component: Component,
+  authenticated,
+  redirectUrl,
+  ...rest
+}) => (
+  <Route
+    {...rest}
+    render={props =>
+      isAuthenticated() === true ? (
+        <Component {...props} />
+      ) : (
+        <Redirect
+          to={{ pathname: "/login", state: { from: props.location } }}
+        />
+      )
+    }
+  />
+);
 export default App;
