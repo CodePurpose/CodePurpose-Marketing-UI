@@ -7,7 +7,8 @@ import {
   Text,
   IconMobile,
   IconGroup,
-  Mobile
+  Mobile,
+  Bold
 } from "../Styles/StyledComponents";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -23,20 +24,31 @@ import {
 
 const primary = "#fafafa";
 const secondary = "#00bbd3";
+const black = "#212121";
+
+const styles = {
+  containerStyle: {
+    paddingBottom: "2em",
+    maxWidth: "1090px",
+    margin: "auto"
+  },
+  title: {
+    color: black,
+    textAlign: "center"
+  }
+};
 
 const ProductionModel = () => {
   return (
     <div style={{ background: primary }}>
-      <Container
-        style={{ paddingBottom: "2em", maxWidth: "1090px", margin: "auto" }}
-      >
-        <div style={{ paddingTop: "1em" }}>
-          <h3>Our standardized model for production:</h3>
+      <Container style={styles.containerStyle}>
+        <div style={{ padding: ".5em" }}>
+          <h2 style={styles.title}>OUR STANDARDIZED MODEL FOR PRODUCTION</h2>
         </div>
         <CardGroup>
           <Card>
             <CardContent style={{ textAlign: "center" }}>
-              <h3>Conversation </h3>
+              <Bold>Conversation </Bold>
               <FontAwesomeIcon icon={faCommentDots} size="3x" />
               <div>
                 <Text>
@@ -57,7 +69,7 @@ const ProductionModel = () => {
           />
           <Card>
             <CardContent style={{ textAlign: "center" }}>
-              <h3>Assessment </h3>
+              <Bold>Assessment </Bold>
               <FontAwesomeIcon icon={faTasks} size="3x" />
               <div>
                 <Text>
@@ -72,7 +84,9 @@ const ProductionModel = () => {
         </CardGroup>
         <IconGroup style={{ maxWidth: "830px", margin: "auto" }}>
           <FontAwesomeIcon icon={faArrowUp} size="3x" color={secondary} />
-          <h3>We iterate through each step until we get it right for you.</h3>
+          <Bold>
+            We iterate through each step until we get it right for you.
+          </Bold>
           <FontAwesomeIcon icon={faArrowDown} size="3x" color={secondary} />
         </IconGroup>
         <div
@@ -91,7 +105,7 @@ const ProductionModel = () => {
         <CardGroup>
           <Card>
             <CardContent style={{ textAlign: "center" }}>
-              <h3>Build </h3>
+              <Bold>Build </Bold>
               <FontAwesomeIcon icon={faFileCode} size="3x" />
               <div>
                 <Text>
@@ -111,7 +125,7 @@ const ProductionModel = () => {
           />
           <Card>
             <CardContent style={{ textAlign: "center" }}>
-              <h3>Mockups </h3>
+              <Bold>Mockups </Bold>
               <FontAwesomeIcon icon={faPencilRuler} size="3x" />
               <div>
                 <Text>
@@ -126,7 +140,9 @@ const ProductionModel = () => {
           </Card>
         </CardGroup>
         <Mobile>
-          <h3>We iterate through each step until we get it right for you.</h3>
+          <Bold>
+            We iterate through each step until we get it right for you.
+          </Bold>
         </Mobile>
       </Container>
     </div>

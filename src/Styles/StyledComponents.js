@@ -13,7 +13,11 @@ const textPrimary = "#000000";
 
 //text************************************
 export const Text = styled.p`
-  color: #00000099;
+  color: #666666;
+`;
+
+export const Bold = styled.h3`
+  color: #212121;
 `;
 
 export const TextContainer = styled.div`
@@ -195,7 +199,7 @@ export const Container = styled.div`
 `;
 
 export const SmallContainer = styled.div`
-  max-width: 800px;
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 `;

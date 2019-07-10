@@ -1,5 +1,10 @@
 import React from "react";
-import { Container, TextContainer, Text } from "../Styles/StyledComponents";
+import {
+  Container,
+  TextContainer,
+  Text,
+  Bold
+} from "../Styles/StyledComponents";
 
 const primary = "#fafafa";
 const secondary = "#00bcd4";
@@ -20,7 +25,7 @@ const AboutUs = () => (
   <div style={styles.backgroundStyle}>
     <Container style={styles.containerStyle}>
       <h1 style={{ color: secondary }}>ABOUT US</h1>
-      <h3 style={{ marginTop: "0" }}>WHO ARE WE</h3>
+      <Bold style={{ marginTop: "0" }}>WHO ARE WE</Bold>
       <TextContainer style={{ alignSelf: "center" }}>
         <Text style={{ marginTop: "0" }}>
           We are a group of innovators, developers, and moonlighters pushing for

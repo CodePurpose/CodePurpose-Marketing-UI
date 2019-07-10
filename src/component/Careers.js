@@ -1,5 +1,10 @@
 import React from "react";
-import { Container, TextContainer, Text } from "../Styles/StyledComponents";
+import {
+  Container,
+  TextContainer,
+  Text,
+  Bold
+} from "../Styles/StyledComponents";
 
 const primary = "#fafafa";
 const secondary = "#00bcd4";
@@ -21,7 +26,7 @@ const Careers = () => {
     <div style={styles.backgroundStyle}>
       <Container style={styles.containerStyle}>
         <h1 style={{ color: secondary }}>CAREERS</h1>
-        <h3 style={{ marginTop: "0" }}>EVERY DAY SHOULD BE MEANINGFUL</h3>
+        <Bold style={{ marginTop: "0" }}>EVERY DAY SHOULD BE MEANINGFUL</Bold>
         <TextContainer style={{ alignSelf: "center" }}>
           <Text style={{ marginTop: "0" }}>
             By cutting out the overused, outdated model of hiring workers from
@@ -32,9 +37,9 @@ const Careers = () => {
             for their actions. Our greatest strength is the inclusiveness of our
             charter and of the talent that it draws.
           </Text>
-          <h3>
+          <Bold>
             HOW DO I JOIN THIS GROUP OF INNOVATORS, DEVELOPERS, AND MOONLIGHTERS
-          </h3>
+          </Bold>
           <Text>
             First, ask yourself what you bring to the table. Next, drop us a
             message on our contact page. We like résumés but we also don’t like

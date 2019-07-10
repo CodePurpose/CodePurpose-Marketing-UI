@@ -7,7 +7,7 @@ import AboutUs from "./component/AboutUs";
 import Discussion from "./component/Discussion";
 import Careers from "./component/Careers";
 import ProductionModel from "./component/ProductionModel";
-import CPOffer from "./component/CPOffer";
+import WeOffer from "./component/WeOffer";
 
 const styles = {
   body: {
@@ -29,7 +29,7 @@ function App() {
         <NavBar />
         <div style={styles.content}>
           <Title />
-          <CPOffer />
+          <WeOffer />
           <ProductionModel />
           <HireUs />
           <AboutUs />
