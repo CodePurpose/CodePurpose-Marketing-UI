@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import discussion from "../images/discussion.jpg";
 
 // colors*********************************
 const primary = "#fafafa";
@@ -343,4 +344,31 @@ export const CareersTextContainer = styled.div`
 export const CareersText = styled.p`
   color: ${lighterBlack};
   margin-top: 0;
+`;
+
+//Discussion Styles *************************************************
+
+export const DiscussionBackground = styled.div`
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(${discussion});
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding-top: 150px;
+  padding-bottom: 150px;
+`;
+export const DiscussionContainer = styled.div`
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  color: white;
+`;
+export const DiscussionTextContainer = styled.div`
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  alignself: center;
 `;
