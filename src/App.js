@@ -11,13 +11,9 @@ import Admin from "./screens/admin";
 import Marketing from "./screens/marketing";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      authUser: null
-    };
-  }
+  state = {
+    authUser: null
+  };
 
   componentDidMount() {
     this.props.firebase.auth.onAuthStateChanged(authUser => {
