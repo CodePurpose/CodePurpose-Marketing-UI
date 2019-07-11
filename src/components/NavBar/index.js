@@ -5,11 +5,11 @@ import {
   NavLinks,
   NavTitle,
   MenuIcon
-} from "../Styles/StyledComponents";
+} from "../../StyledComponents";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAlignJustify } from "@fortawesome/free-solid-svg-icons";
-import NavMobileMenu from "./NavMobileMenu";
-import Backdrop from "./Backdrop";
+import NavMobileMenu from "../NavMobileMenu";
+import Backdrop from "../Backdrop";
 
 class NavBar extends Component {
   state = { mobileMenuOpen: false };
