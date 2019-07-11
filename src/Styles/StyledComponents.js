@@ -6,6 +6,8 @@ const primary = "#fafafa";
 const primaryLight = "#ffffff";
 const secondary = "#00bcd4";
 const textPrimary = "#000000";
+const black = "#212121";
+const lighterBlack = "#666666";
 
 //text************************************
 export const Text = styled.p`
@@ -267,4 +269,78 @@ export const Mobile = styled.div`
     display: block;
     margin: 1em;
   }
+`;
+
+//AboutUs Styles *************************************************
+
+export const AboutUsBackground = styled.div`
+  background: ${primary};
+  padding-bottom: 1em;
+`;
+
+export const AboutUsContainer = styled.div`
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const AboutUsHeader = styled.h1`
+  color: ${secondary};
+`;
+
+export const AboutUsHeaderTwo = styled.h3`
+  color: ${black};
+  margin-top: 0;
+`;
+
+export const AboutUsTextContainer = styled.div`
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  alignself: center;
+`;
+
+export const AboutUsText = styled.p`
+  color: ${lighterBlack};
+  margin-top: 0;
+`;
+
+//Careers Styles ************************************************
+
+export const CareersBackground = styled.div`
+  background: ${primary};
+  padding-bottom: 2em;
+`;
+
+export const CareersContainer = styled.div`
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const CareersHeader = styled.h1`
+  color: ${secondary};
+`;
+
+export const CareersHeaderTwo = styled.h3`
+  color: ${black};
+  margin-top: 0;
+`;
+
+export const CareersTextContainer = styled.div`
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  alignself: center;
+`;
+
+export const CareersText = styled.p`
+  color: ${lighterBlack};
+  margin-top: 0;
 `;
