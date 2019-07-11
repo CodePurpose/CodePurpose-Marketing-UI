@@ -1,6 +1,6 @@
 import React from "react";
-import { Container } from "../Styles/StyledComponents";
-import background from "../images/backgroundOne.jpg";
+import { Container } from "../../StyledComponents";
+import background from "../../images/backgroundOne.jpg";
 
 const styles = {
   backgroundStyle: {

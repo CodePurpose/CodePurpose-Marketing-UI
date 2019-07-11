@@ -1,8 +1,8 @@
 import React from "react";
-import NavBar from "../component/NavBar";
-import Title from "../component/Title";
-import Footer from "../component/Footer";
-import ProductionModel from "../component/ProductionModel";
+import NavBar from "../components/NavBar";
+import Title from "../components/Title";
+import Footer from "../components/Footer";
+import ProductionModel from "../components/ProductionModel";
 
 const styles = {
   body: {

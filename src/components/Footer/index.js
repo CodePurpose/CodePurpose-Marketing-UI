@@ -3,7 +3,7 @@ import {
   FooterContainer,
   FooterBackground,
   List
-} from "../Styles/StyledComponents";
+} from "../../StyledComponents";
 
 const textPrimary = "#000000";
 

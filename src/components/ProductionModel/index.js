@@ -8,7 +8,7 @@ import {
   IconMobile,
   IconGroup,
   Mobile
-} from "../Styles/StyledComponents";
+} from "../../StyledComponents";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowRight,

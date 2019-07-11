@@ -1,5 +1,5 @@
 import React from "react";
-import { MobileMenu, MenuItem, MenuList } from "../Styles/StyledComponents";
+import { MobileMenu, MenuItem, MenuList } from "../../StyledComponents";
 
 const styles = {
   ulStyle: {

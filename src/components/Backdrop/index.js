@@ -1,5 +1,5 @@
 import React from "react";
-import { BackdropStyle } from "../Styles/StyledComponents";
+import { BackdropStyle } from "../../StyledComponents";
 
 const Backdrop = props => <BackdropStyle onClick={props.click} />;
 
