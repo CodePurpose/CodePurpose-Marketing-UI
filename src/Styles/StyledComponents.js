@@ -4,11 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // colors*********************************
 const primary = "#fafafa";
 const primaryLight = "#ffffff";
-// const primaryDark = "#c7c7c7";
-
 const secondary = "#00bcd4";
-// const secondaryDark = "#008ba3";
-
 const textPrimary = "#000000";
 
 //text************************************
@@ -22,8 +18,8 @@ export const Bold = styled.h3`
 
 export const TextContainer = styled.div`
   max-width: 700px;
-  margen-left: auto;
-  margen-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 `;
 //NavBar**********************************
 export const Nav = styled.nav`
