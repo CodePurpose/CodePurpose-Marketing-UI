@@ -1,14 +1,17 @@
 import React from "react";
 import {
-  Container,
   Card,
-  CardContent,
+  PMCardContent,
   CardGroup,
   Text,
   IconMobile,
-  IconGroup,
-  Mobile,
-  Bold
+  ProductionModelHeader,
+  ProductionModelContainer,
+  ProductionModelBackground,
+  ProductionModelTitle,
+  ProductionMobileOnly,
+  CenterGroup,
+  MobileOnlyArrow
 } from "../Styles/StyledComponents";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -22,130 +25,101 @@ import {
   faFileCode
 } from "@fortawesome/free-solid-svg-icons";
 
-const primary = "#fafafa";
 const secondary = "#00bbd3";
-const black = "#212121";
-
-const styles = {
-  containerStyle: {
-    paddingBottom: "2em",
-    maxWidth: "1090px",
-    margin: "auto"
-  },
-  title: {
-    color: black,
-    textAlign: "center"
-  }
-};
 
 const ProductionModel = () => {
   return (
-    <div style={{ background: primary }}>
-      <Container style={styles.containerStyle}>
-        <div style={{ padding: ".5em" }}>
-          <h2 style={styles.title}>OUR STANDARDIZED MODEL FOR PRODUCTION</h2>
-        </div>
+    <ProductionModelBackground>
+      <ProductionModelContainer>
+        <ProductionModelTitle>
+          OUR STANDARDIZED MODEL FOR PRODUCTION
+        </ProductionModelTitle>
         <CardGroup>
           <Card>
-            <CardContent style={{ textAlign: "center" }}>
-              <Bold>Conversation </Bold>
+            <PMCardContent>
+              <ProductionModelHeader>Conversation </ProductionModelHeader>
               <FontAwesomeIcon icon={faCommentDots} size="3x" />
-              <div>
-                <Text>
-                  We start off with a simple conversation. We want to know your
-                  problems, your needs, and your objective, which may or may not
-                  be identical. Through a conscientious process we help identify
-                  all three and ultimately your solution.
-                </Text>
-              </div>
-            </CardContent>
+              <Text>
+                We start off with a simple conversation. We want to know your
+                problems, your needs, and your objective, which may or may not
+                be identical. Through a conscientious process we help identify
+                all three and ultimately your solution.
+              </Text>
+            </PMCardContent>
           </Card>
           <IconMobile
             icon={faArrowRight}
             type="right"
             size="3x"
-            style={{ alignSelf: "center" }}
             color={secondary}
           />
           <Card>
-            <CardContent style={{ textAlign: "center" }}>
-              <Bold>Assessment </Bold>
+            <PMCardContent>
+              <ProductionModelHeader>Assessment </ProductionModelHeader>
               <FontAwesomeIcon icon={faTasks} size="3x" />
-              <div>
-                <Text>
-                  We welcome all clients but we also pride ourselves on honesty.
-                  If your solution doesn’t require an original build, we will
-                  discourage the unnecessary investment. Our objective is to
-                  find you the right solution.
-                </Text>
-              </div>
-            </CardContent>
+              <Text>
+                We welcome all clients but we also pride ourselves on honesty.
+                If your solution doesn’t require an original build, we will
+                discourage the unnecessary investment. Our objective is to find
+                you the right solution.
+              </Text>
+            </PMCardContent>
           </Card>
         </CardGroup>
-        <IconGroup style={{ maxWidth: "830px", margin: "auto" }}>
+        <CenterGroup>
           <FontAwesomeIcon icon={faArrowUp} size="3x" color={secondary} />
-          <Bold>
+          <ProductionModelHeader>
             We iterate through each step until we get it right for you.
-          </Bold>
+          </ProductionModelHeader>
           <FontAwesomeIcon icon={faArrowDown} size="3x" color={secondary} />
-        </IconGroup>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column"
-          }}
-        >
+        </CenterGroup>
+        <MobileOnlyArrow>
           <IconMobile
             icon={faArrowDown}
             size="3x"
             color={secondary}
             type="mobile"
           />
-        </div>
+        </MobileOnlyArrow>
         <CardGroup>
           <Card>
-            <CardContent style={{ textAlign: "center" }}>
-              <Bold>Build </Bold>
+            <PMCardContent>
+              <ProductionModelHeader>Build </ProductionModelHeader>
               <FontAwesomeIcon icon={faFileCode} size="3x" />
-              <div>
-                <Text>
-                  Investment is not a four-step process. You invest in our team
-                  and we invest in your future. We follow through with quality
-                  software trackmanship by unit testing, analytics, and alerts.
-                </Text>
-              </div>
-            </CardContent>
+              <Text>
+                Investment is not a four-step process. You invest in our team
+                and we invest in your future. We follow through with quality
+                software trackmanship by unit testing, analytics, and alerts.
+              </Text>
+            </PMCardContent>
           </Card>
           <IconMobile
             icon={faArrowLeft}
             type="left"
             size="3x"
             color={secondary}
-            style={{ alignSelf: "center" }}
           />
           <Card>
-            <CardContent style={{ textAlign: "center" }}>
-              <Bold>Mockups </Bold>
+            <PMCardContent>
+              <ProductionModelHeader>Mockups </ProductionModelHeader>
               <FontAwesomeIcon icon={faPencilRuler} size="3x" />
-              <div>
-                <Text>
-                  Rome was not built in a day so why should your software. We
-                  believe in taking the iterative approach to building original
-                  products. We will provide mockups of your product and have
-                  another conversation and then repeat the process until we’re
-                  in line to meet your objective.
-                </Text>
-              </div>
-            </CardContent>
+              <Text>
+                Rome was not built in a day so why should your software. We
+                believe in taking the iterative approach to building original
+                products. We will provide mockups of your product and have
+                another conversation and then repeat the process until we’re in
+                line to meet your objective.
+              </Text>
+            </PMCardContent>
           </Card>
         </CardGroup>
-        <Mobile>
-          <Bold>
+        <ProductionMobileOnly>
+          <ProductionModelHeader>
             We iterate through each step until we get it right for you.
-          </Bold>
-        </Mobile>
-      </Container>
-    </div>
+          </ProductionModelHeader>
+        </ProductionMobileOnly>
+      </ProductionModelContainer>
+    </ProductionModelBackground>
   );
 };
 

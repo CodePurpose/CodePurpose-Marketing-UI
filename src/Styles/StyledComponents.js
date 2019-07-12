@@ -219,10 +219,6 @@ export const Card = styled.div`
   }
 `;
 
-export const CardContent = styled.div`
-  padding: 1em 1.25em;
-`;
-
 export const CardGroup = styled.div`
   display: flex;
   justify-content: space-between;
@@ -233,43 +229,26 @@ export const CardGroup = styled.div`
 
 //icons********************************************
 export const IconMobile = styled(FontAwesomeIcon)`
+  align-self: center;
+
   ${props => {
     if (props.type === "mobile") {
       return `display: none;`;
     }
   }}
+
   @media (max-width: 480px) {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     ${props => {
       if (props.type === "right") {
-        return `transform: rotate(90deg);`;
+        return `transform: rotate(90deg); `;
       } else if (props.type === "left") {
-        return `transform: rotate(-90deg);`;
+        return `transform: rotate(-90deg); `;
       } else if (props.type === "mobile") {
-        return `display: block; align-self: center`;
+        return `display: block;`;
       }
     }}
-  }
-`;
-
-export const IconGroup = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding-top: 2em;
-  padding-bottom: 2em;
-
-  @media (max-width: 480px) {
-    display: none;
-  }
-`;
-
-export const Mobile = styled.div`
-  display: none;
-
-  @media (max-width: 480px) {
-    display: block;
-    margin: 1em;
   }
 `;
 
@@ -401,4 +380,62 @@ export const HireUsTextContainer = styled.div`
   margin-left: auto;
   margin-right: auto;
   alignself: center;
+`;
+
+//ProductionModel Styles *************************************************
+
+export const ProductionModelBackground = styled.div`
+  background: ${primary};
+`;
+
+export const ProductionModelContainer = styled.div`
+  max-width: 1090px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2em;
+`;
+
+export const ProductionModelTitle = styled.h2`
+  color: ${black};
+  text-align: center;
+  padding: 0.5em;
+`;
+
+export const PMCardContent = styled.div`
+  padding: 1em 1.25em;
+  text-align: center;
+`;
+
+export const ProductionModelHeader = styled.h3`
+  color: ${black};
+`;
+
+export const ProductionMobileOnly = styled.div`
+  display: none;
+
+  @media (max-width: 480px) {
+    display: block;
+    margin: 1em;
+  }
+`;
+export const MobileOnlyArrow = styled.div`
+  display: none;
+
+  @media (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
+export const CenterGroup = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  max-width: 830px;
+  margin: auto;
+
+  @media (max-width: 480px) {
+    display: none;
+  }
 `;
