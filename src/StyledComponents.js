@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import discussion from "../images/discussion.jpg";
-import computer from "../images/computer.jpg";
-import backgroundOne from "../images/backgroundOne.jpg";
+import discussion from "./images/discussion.jpg";
+import computer from "./images/computer.jpg";
+import backgroundOne from "./images/backgroundOne.jpg";
 
 // colors*********************************
 const primary = "#fafafa";

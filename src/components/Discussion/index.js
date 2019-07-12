@@ -3,7 +3,7 @@ import {
   DiscussionBackground,
   DiscussionContainer,
   DiscussionTextContainer
-} from "../Styles/StyledComponents";
+} from "../../StyledComponents";
 
 const Discussion = () => (
   <DiscussionBackground>

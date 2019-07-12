@@ -1,5 +1,5 @@
 import React from "react";
-import { TitleBackground, TitleContainer } from "../Styles/StyledComponents";
+import { TitleBackground, TitleContainer } from "../../StyledComponents";
 
 const Title = () => (
   <TitleBackground>

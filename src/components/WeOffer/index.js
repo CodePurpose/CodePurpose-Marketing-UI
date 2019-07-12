@@ -6,7 +6,7 @@ import {
   WeOfferListContainer,
   WeOfferHeader,
   WeOfferUL
-} from "../Styles/StyledComponents";
+} from "../../StyledComponents";
 
 const WeOffer = () => (
   <WeOfferBackground>

@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  MobileMenu,
-  MenuItem,
-  MenuList,
-  MenuUL
-} from "../Styles/StyledComponents";
+import { MobileMenu, MenuItem, MenuList, MenuUL } from "../../StyledComponents";
 
 const NavMobileMenu = props => (
   <MobileMenu open={props.open}>

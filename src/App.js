@@ -1,45 +1,69 @@
-import React from "react";
-import NavBar from "./component/NavBar";
-import Title from "./component/Title";
-import Footer from "./component/Footer";
-import HireUs from "./component/HireUs";
-import AboutUs from "./component/AboutUs";
-import Discussion from "./component/Discussion";
-import Careers from "./component/Careers";
-import ProductionModel from "./component/ProductionModel";
-import WeOffer from "./component/WeOffer";
+import React, { Component } from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from "react-router-dom";
+import { withFirebase } from "./components/Firebase";
+import Login from "./screens/login";
+import Admin from "./screens/admin";
+import Marketing from "./screens/marketing";
 
-const styles = {
-  body: {
-    display: "flex",
-    flexDirection: "column",
-    minHeight: "100vh",
-    width: "100%"
-  },
-  content: {
-    flex: "1 0 auto",
-    width: "100%"
+class App extends Component {
+  state = {
+    authUser: null
+  };
+
+  componentDidMount() {
+    this.props.firebase.auth.onAuthStateChanged(authUser => {
+      authUser
+        ? this.setState({ authUser })
+        : this.setState({ authUser: null });
+    });
   }
-};
 
-function App() {
-  return (
-    <div>
-      <div style={styles.body}>
-        <NavBar />
-        <div style={styles.content}>
-          <Title />
-          <WeOffer />
-          <ProductionModel />
-          <HireUs />
-          <AboutUs />
-          <Discussion />
-          <Careers />
-        </div>
+  componentWillUnmount() {
+    this.listener();
+  }
+
+  render() {
+    return (
+      <div>
+        <Router>
+          <Switch>
+            <Route exact path="/" component={Marketing} />
+            <Route exact path="/login" component={Login} />
+            <PrivateRoute
+              exact
+              path="/admin"
+              component={Admin}
+              authenticated={this.state.authUser}
+            />
+          </Switch>
+        </Router>
       </div>
-      <Footer />
-    </div>
-  );
+    );
+  }
 }
 
-export default App;
+const PrivateRoute = ({
+  component: Component,
+  authenticated,
+  redirectUrl,
+  ...rest
+}) => (
+  <Route
+    {...rest}
+    render={props =>
+      authenticated ? (
+        <Component {...props} />
+      ) : (
+        <Redirect
+          to={{ pathname: "/login", state: { from: props.location } }}
+        />
+      )
+    }
+  />
+);
+export default withFirebase(App);

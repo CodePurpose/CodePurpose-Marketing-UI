@@ -3,7 +3,7 @@ import {
   HireUsBackground,
   HireUsContainer,
   HireUsTextContainer
-} from "../Styles/StyledComponents";
+} from "../../StyledComponents";
 
 const HireUs = () => (
   <HireUsBackground>

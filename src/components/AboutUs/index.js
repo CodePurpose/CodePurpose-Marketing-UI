@@ -6,7 +6,7 @@ import {
   AboutUsHeaderTwo,
   AboutUsHeader,
   AboutUsTextContainer
-} from "../Styles/StyledComponents";
+} from "../../StyledComponents";
 
 const AboutUs = () => (
   <AboutUsBackground>

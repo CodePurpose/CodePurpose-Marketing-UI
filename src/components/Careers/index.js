@@ -6,7 +6,7 @@ import {
   CareersHeaderTwo,
   CareersTextContainer,
   CareersText
-} from "../Styles/StyledComponents";
+} from "../../StyledComponents";
 
 const Careers = () => {
   return (

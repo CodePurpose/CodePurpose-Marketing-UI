@@ -12,7 +12,7 @@ import {
   ProductionMobileOnly,
   CenterGroup,
   MobileOnlyArrow
-} from "../Styles/StyledComponents";
+} from "../../StyledComponents";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowRight,
