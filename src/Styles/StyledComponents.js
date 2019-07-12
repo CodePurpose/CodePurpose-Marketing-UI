@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import discussion from "../images/discussion.jpg";
 import computer from "../images/computer.jpg";
+import backgroundOne from "../images/backgroundOne.jpg";
 
 // colors*********************************
 const primary = "#fafafa";
@@ -438,4 +439,24 @@ export const CenterGroup = styled.div`
   @media (max-width: 480px) {
     display: none;
   }
+`;
+
+//Title Styles **********************************************************
+export const TitleBackground = styled.div`
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(${backgroundOne});
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding-top: 250px;
+  padding-bottom: 250px;
+`;
+
+export const TitleContainer = styled.div`
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: white;
+  padding: 0.5em;
 `;
