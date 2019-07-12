@@ -9,7 +9,7 @@ import {
 } from "../../StyledComponents";
 
 const AboutUs = () => (
-  <AboutUsBackground>
+  <AboutUsBackground id="about">
     <AboutUsContainer>
       <AboutUsHeader>ABOUT US</AboutUsHeader>
       <AboutUsHeaderTwo>WHO ARE WE</AboutUsHeaderTwo>

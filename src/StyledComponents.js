@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import discussion from "./images/discussion.jpg";
 import computer from "./images/computer.jpg";
 import backgroundOne from "./images/backgroundOne.jpg";
+import { HashLink as Link } from "react-router-hash-link";
 
 // colors*********************************
 const primary = "#fafafa";
@@ -55,11 +56,9 @@ export const NavItems = styled.ul`
   }
 `;
 
-export const NavLinks = styled.a`const FontAwesomeIcon = ({ className, children }) => (
-  <svg className={className}>{children}</svg>
-);
+export const NavLinks = styled(Link)`
   text-decoration: none;
-  color: ${textPrimary};
+  color: ${black};
   font-size: 1rem;
   padding-left: 10px;
 
@@ -125,7 +124,7 @@ export const MenuUL = styled.ul`
   padding-left: 0;
 `;
 
-export const MenuItem = styled.a`
+export const MenuItem = styled(Link)`
   text-decoration: none;
   color: ${textPrimary};
   font-size: 1.5em;

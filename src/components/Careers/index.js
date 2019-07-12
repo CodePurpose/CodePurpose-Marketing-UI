@@ -10,7 +10,7 @@ import {
 
 const Careers = () => {
   return (
-    <CareersBackground>
+    <CareersBackground id="careers">
       <CareersContainer>
         <CareersHeader>CAREERS</CareersHeader>
         <CareersHeaderTwo>EVERY DAY SHOULD BE MEANINGFUL</CareersHeaderTwo>

@@ -2,7 +2,7 @@ import React from "react";
 import { TitleBackground, TitleContainer } from "../../StyledComponents";
 
 const Title = () => (
-  <TitleBackground>
+  <TitleBackground id="home">
     <TitleContainer>
       <h2>
         We are

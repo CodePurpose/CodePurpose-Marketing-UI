@@ -5,19 +5,19 @@ const NavMobileMenu = props => (
   <MobileMenu open={props.open}>
     <MenuUL>
       <MenuList>
-        <MenuItem href="/">Home</MenuItem>
+        <MenuItem to="/#home">Home</MenuItem>
       </MenuList>
       <MenuList>
-        <MenuItem href="/">About</MenuItem>
+        <MenuItem to="/#about">About</MenuItem>
       </MenuList>
       <MenuList>
-        <MenuItem href="/">Blog</MenuItem>
+        <MenuItem to="/">Blog</MenuItem>
       </MenuList>
       <MenuList>
-        <MenuItem href="/">Careers</MenuItem>
+        <MenuItem to="/#careers">Careers</MenuItem>
       </MenuList>
       <MenuList>
-        <MenuItem href="/">Contact</MenuItem>
+        <MenuItem to="/">Contact</MenuItem>
       </MenuList>
     </MenuUL>
   </MobileMenu>

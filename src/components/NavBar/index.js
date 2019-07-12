@@ -32,19 +32,25 @@ class NavBar extends Component {
           <NavTitle>CodePurpose</NavTitle>
           <NavItems>
             <li>
-              <NavLinks href="/">Home</NavLinks>
+              <NavLinks smooth to="/#home">
+                Home
+              </NavLinks>
             </li>
             <li>
-              <NavLinks href="/">About</NavLinks>
+              <NavLinks smooth to="/#about">
+                About
+              </NavLinks>
             </li>
             <li>
-              <NavLinks href="/">Blog</NavLinks>
+              <NavLinks to="/">Blog</NavLinks>
             </li>
             <li>
-              <NavLinks href="/">Careers</NavLinks>
+              <NavLinks smooth to="/#careers">
+                Careers
+              </NavLinks>
             </li>
             <li>
-              <NavLinks href="/">Contact</NavLinks>
+              <NavLinks to="/">Contact</NavLinks>
             </li>
           </NavItems>
           <MenuIcon onClick={this.menuToggleHandler}>
