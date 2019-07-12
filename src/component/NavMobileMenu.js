@@ -1,17 +1,14 @@
 import React from "react";
-import { MobileMenu, MenuItem, MenuList } from "../Styles/StyledComponents";
-
-const styles = {
-  ulStyle: {
-    listStyle: "none",
-    textAlign: "center",
-    paddingLeft: "0"
-  }
-};
+import {
+  MobileMenu,
+  MenuItem,
+  MenuList,
+  MenuUL
+} from "../Styles/StyledComponents";
 
 const NavMobileMenu = props => (
   <MobileMenu open={props.open}>
-    <ul style={styles.ulStyle}>
+    <MenuUL>
       <MenuList>
         <MenuItem href="/">Home</MenuItem>
       </MenuList>
@@ -27,7 +24,7 @@ const NavMobileMenu = props => (
       <MenuList>
         <MenuItem href="/">Contact</MenuItem>
       </MenuList>
-    </ul>
+    </MenuUL>
   </MobileMenu>
 );
 

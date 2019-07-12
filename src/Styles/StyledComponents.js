@@ -17,10 +17,6 @@ export const Text = styled.p`
   color: #666666;
 `;
 
-export const Bold = styled.h3`
-  color: #212121;
-`;
-
 export const TextContainer = styled.div`
   max-width: 700px;
   margin-left: auto;
@@ -123,6 +119,12 @@ export const MenuList = styled.li`
   padding-top: 0.5em;
 `;
 
+export const MenuUL = styled.ul`
+  list-style: none;
+  text-align: center;
+  padding-left: 0;
+`;
+
 export const MenuItem = styled.a`
   text-decoration: none;
   color: ${textPrimary};
@@ -195,12 +197,6 @@ export const Item = styled.a`
 
 export const Container = styled.div`
   max-width: 1320px;
-  margin-left: auto;
-  margin-right: auto;
-`;
-
-export const SmallContainer = styled.div`
-  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 `;
@@ -459,4 +455,33 @@ export const TitleContainer = styled.div`
   text-align: center;
   color: white;
   padding: 0.5em;
+`;
+
+//WeOffer Styles *********************************************************
+
+export const WeOfferBackground = styled.div`
+  background: ${primaryLight};
+  padding-top: 1em;
+`;
+
+export const WeOfferContainer = styled.div`
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+`;
+
+export const WeOfferListContainer = styled.div`
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+`;
+
+export const WeOfferHeader = styled.h3`
+  color: ${black};
+`;
+
+export const WeOfferUL = styled.ul`
+  color: ${secondary};
 `;
