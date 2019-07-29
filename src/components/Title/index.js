@@ -6,7 +6,7 @@ const Title = () => (
     <TitleContainer>
       <h2>
         We are
-        <span style={{ fontSize: "150%" }}> CodePurpose </span>a one-stop dev
+        <span className="large-font"> CodePurpose </span>a one-stop dev
         shop for custom software solutions. We build original, top-quality
         software and fill the gaps for companies looking to outsource their tech
         team.

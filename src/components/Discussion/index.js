@@ -10,7 +10,7 @@ const Discussion = () => (
     <DiscussionContainer>
       <h3>THERE IS ALWAYS ROOM FOR DISCUSSION</h3>
       <DiscussionTextContainer>
-        <p style={{ marginTop: "0" }}>
+        <p className = "no-margin-top">
           Our objective in striving for identity equity is never to exclude an
           employee, client, or anyone else. We are aspiring to start a
           conversation for change first and foremost. We expect to make mistakes

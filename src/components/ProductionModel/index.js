@@ -89,7 +89,7 @@ const ProductionModel = () => {
               <Text>
                 Investment is not a four-step process. You invest in our team
                 and we invest in your future. We follow through with quality
-                software trackmanship by unit testing, analytics, and alerts.
+                software craftsmanship by unit testing, analytics, and alerts.
               </Text>
             </PMCardContent>
           </Card>

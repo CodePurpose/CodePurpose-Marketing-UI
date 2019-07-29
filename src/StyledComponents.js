@@ -9,13 +9,12 @@ import { HashLink as Link } from "react-router-hash-link";
 const primary = "#fafafa";
 const primaryLight = "#ffffff";
 const secondary = "#00bcd4";
-const textPrimary = "#000000";
 const black = "#212121";
 const lighterBlack = "#666666";
 
 //text************************************
 export const Text = styled.p`
-  color: #666666;
+  color: ${lighterBlack};
 `;
 
 export const TextContainer = styled.div`
@@ -34,7 +33,7 @@ export const Nav = styled.nav`
   flex-direction: row;
   justify-content: space-between;
   z-index: 1;
-  color: ${textPrimary};
+  color: ${black};
   background: ${primary};
   box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.5);
 `;
@@ -75,7 +74,7 @@ export const MenuIcon = styled.a`
   align-self: center;
   margin-right: 1em;
   text-decoration: none;
-  color: ${textPrimary};
+  color: ${black};
   :active {
     color: ${secondary};
   }
@@ -126,7 +125,7 @@ export const MenuUL = styled.ul`
 
 export const MenuItem = styled(Link)`
   text-decoration: none;
-  color: ${textPrimary};
+  color: ${black};
   font-size: 1.5em;
   :hover {
     color: ${secondary};
@@ -181,7 +180,7 @@ export const List = styled.ul`
 //used in footer &
 export const Item = styled.a`
   text-decoration: none;
-  color: ${textPrimary};
+  color: ${black}};
   font-size: 1rem;
 
   :hover {
@@ -314,7 +313,7 @@ export const CareersTextContainer = styled.div`
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-  alignself: center;
+  align-self: center;
 `;
 
 export const CareersText = styled.p`
@@ -346,7 +345,7 @@ export const DiscussionTextContainer = styled.div`
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-  alignself: center;
+  align-self: center;
 `;
 
 //HireUs Styles *******************************************************
@@ -375,7 +374,7 @@ export const HireUsTextContainer = styled.div`
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-  alignself: center;
+  align-self: center;
 `;
 
 //ProductionModel Styles *************************************************

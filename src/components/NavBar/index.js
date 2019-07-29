@@ -41,17 +41,21 @@ class NavBar extends Component {
                 About
               </NavLinks>
             </li>
+            {/* 
+            Will add when blog is ready.
             <li>
               <NavLinks to="/">Blog</NavLinks>
-            </li>
+            </li> */}
             <li>
               <NavLinks smooth to="/#careers">
                 Careers
               </NavLinks>
             </li>
+            {/* 
+            Will add when contact form is ready.
             <li>
               <NavLinks to="/">Contact</NavLinks>
-            </li>
+            </li> */}
           </NavItems>
           <MenuIcon onClick={this.menuToggleHandler}>
             <FontAwesomeIcon icon={faAlignJustify} size="2x" />

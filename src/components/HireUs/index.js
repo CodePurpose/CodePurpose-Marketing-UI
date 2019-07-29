@@ -10,7 +10,7 @@ const HireUs = () => (
     <HireUsContainer>
       <h3>Are you looking to hire your own team of engineers?</h3>
       <HireUsTextContainer>
-        <p style={{ marginTop: "0" }}>
+        <p className="no-margin-top">
           Our solutions extend to more than just our custom software.
           CodePurpose was founded on the principle of innovation and
           opportunity. We provide top-quality engineers looking to fill your
