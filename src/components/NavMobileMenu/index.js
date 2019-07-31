@@ -1,33 +1,29 @@
 import React from "react";
-import { MobileMenu, MenuItem, MenuList } from "../../StyledComponents";
-
-const styles = {
-  ulStyle: {
-    listStyle: "none",
-    textAlign: "center",
-    paddingLeft: "0"
-  }
-};
+import { MobileMenu, MenuItem, MenuList, MenuUL } from "../../StyledComponents";
 
 const NavMobileMenu = props => (
   <MobileMenu open={props.open}>
-    <ul style={styles.ulStyle}>
+    <MenuUL>
       <MenuList>
-        <MenuItem href="/">Home</MenuItem>
+        <MenuItem smooth to="/#home">Home</MenuItem>
       </MenuList>
       <MenuList>
-        <MenuItem href="/">About</MenuItem>
+        <MenuItem smooth to="/#about">About</MenuItem>
       </MenuList>
+      {/*
+      Will add when blog is ready
       <MenuList>
-        <MenuItem href="/">Blog</MenuItem>
-      </MenuList>
+        <MenuItem smooth to="/">Blog</MenuItem>
+      </MenuList> */}
       <MenuList>
-        <MenuItem href="/">Careers</MenuItem>
+        <MenuItem smooth to="/#careers">Careers</MenuItem>
       </MenuList>
+      {/*
+      Will add when contact form is created. 
       <MenuList>
-        <MenuItem href="/">Contact</MenuItem>
-      </MenuList>
-    </ul>
+        <MenuItem smooth to="/">Contact</MenuItem>
+      </MenuList> */}
+    </MenuUL>
   </MobileMenu>
 );
 

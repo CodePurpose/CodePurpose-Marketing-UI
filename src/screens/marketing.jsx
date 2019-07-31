@@ -3,6 +3,11 @@ import NavBar from "../components/NavBar";
 import Title from "../components/Title";
 import Footer from "../components/Footer";
 import ProductionModel from "../components/ProductionModel";
+import Discussion from "../components/Discussion";
+import HireUs from "../components/HireUs";
+import AboutUs from "../components/AboutUs";
+import Careers from "../components/Careers";
+import WeOffer from "../components/WeOffer";
 
 const styles = {
   body: {
@@ -24,7 +29,12 @@ function Marketing() {
         <NavBar />
         <div style={styles.content}>
           <Title />
+          <WeOffer />
           <ProductionModel />
+          <HireUs />
+          <AboutUs />
+          <Discussion />
+          <Careers />
         </div>
       </div>
       <Footer />

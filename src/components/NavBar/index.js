@@ -32,20 +32,30 @@ class NavBar extends Component {
           <NavTitle>CodePurpose</NavTitle>
           <NavItems>
             <li>
-              <NavLinks href="/">Home</NavLinks>
+              <NavLinks smooth to="/#home">
+                Home
+              </NavLinks>
             </li>
             <li>
-              <NavLinks href="/">About</NavLinks>
+              <NavLinks smooth to="/#about">
+                About
+              </NavLinks>
             </li>
+            {/* 
+            Will add when blog is ready.
             <li>
-              <NavLinks href="/">Blog</NavLinks>
-            </li>
+              <NavLinks to="/">Blog</NavLinks>
+            </li> */}
             <li>
-              <NavLinks href="/">Careers</NavLinks>
+              <NavLinks smooth to="/#careers">
+                Careers
+              </NavLinks>
             </li>
+            {/* 
+            Will add when contact form is ready.
             <li>
-              <NavLinks href="/">Contact</NavLinks>
-            </li>
+              <NavLinks to="/">Contact</NavLinks>
+            </li> */}
           </NavItems>
           <MenuIcon onClick={this.menuToggleHandler}>
             <FontAwesomeIcon icon={faAlignJustify} size="2x" />

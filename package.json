@@ -7,9 +7,12 @@
     "@fortawesome/free-solid-svg-icons": "^5.8.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "firebase": "^6.2.4",
+    "lodash": "^4.17.13",
+    "lodash.template": "^4.5.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
+    "react-router-hash-link": "^1.2.1",
     "react-scripts": "3.0.0",
     "recompose": "^0.30.0",
     "styled-components": "^4.2.0"
