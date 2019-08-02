@@ -532,6 +532,7 @@ export const ConductCloseBtn = styled.button`
   :hover {
     color: white;
     background-color: ${secondaryDark};
+    cursor: pointer;
   }
 `;
 
