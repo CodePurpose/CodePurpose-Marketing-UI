@@ -7,7 +7,7 @@ import {
   CareersTextContainer,
   CareersText,
   ViewConductBtn
-} from "../../StyledComponents";
+} from "./carrersStyle";
 import CodeOfConduct from "../CodeOfConduct";
 
 class Careers extends Component {
