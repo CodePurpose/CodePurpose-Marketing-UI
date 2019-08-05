@@ -9,7 +9,7 @@ import {
   ConductText,
   ConductTitle,
   ConductHeader
-} from "./ConductStyles";
+} from "./conductStyles";
 
 const CodeOfConduct = props => (
   <ConductBackdrop>
