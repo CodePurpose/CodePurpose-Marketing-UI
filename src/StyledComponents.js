@@ -177,7 +177,6 @@ export const List = styled.ul`
     padding-bottom: 1em;
   }
 `;
-//used in footer &
 export const Item = styled.a`
   text-decoration: none;
   color: ${black}};

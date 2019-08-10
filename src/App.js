@@ -9,6 +9,7 @@ import { withFirebase } from "./components/Firebase";
 import Login from "./screens/login";
 import Admin from "./screens/admin";
 import Marketing from "./screens/marketing";
+import ContactUs from "./components/ContactUs";
 
 class App extends Component {
   state = {
@@ -34,6 +35,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Marketing} />
             <Route exact path="/login" component={Login} />
+            <Route exact path="/ContactUs" component={ContactUs} />
             <PrivateRoute
               exact
               path="/admin"
