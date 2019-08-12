@@ -8,7 +8,8 @@ import {
   ContactBackground,
   ContactUsBtn,
   ContactFormContainer,
-  ContactContainer
+  ContactUsTitle,
+  ContactCloseBtn
 } from "./contactUsStyle";
 
 const ContactUs = props => {
@@ -23,92 +24,93 @@ const ContactUs = props => {
 
   return (
     <ContactBackground>
-      <ContactContainer>
-        <h1>Contact Us</h1>
-        <ContactFormContainer>
-          <ContactForm onSubmit={handleSubmit}>
-            <table style={{ width: "100%" }}>
-              <tbody>
-                <tr>
-                  <td>
-                    <label htmlFor="firstName">First Name: </label>
-                    <ContactInput
-                      type="text"
-                      id="firstName"
-                      placeholder="Jane"
-                      name="firstName"
-                      value={values.firstName}
-                      onBlur={handleBlur}
-                      onChange={handleChange}
-                    />
+      <ContactFormContainer>
+        <ContactUsTitle>Contact Us</ContactUsTitle>
+        <ContactForm onSubmit={handleSubmit}>
+          <table style={{ width: "100%" }}>
+            <tbody>
+              <tr>
+                <td>
+                  <label htmlFor="firstName">First Name: </label>
+                  <ContactInput
+                    type="text"
+                    id="firstName"
+                    placeholder="Jane"
+                    name="firstName"
+                    value={values.firstName}
+                    onBlur={handleBlur}
+                    onChange={handleChange}
+                  />
 
-                    {errors.firstName && touched.firstName && (
-                      <ErrorMsg>{errors.firstName}</ErrorMsg>
-                    )}
-                  </td>
-                  <td>
-                    <label htmlFor="lastName">Last Name:</label>
-                    <ContactInput
-                      type="text"
-                      id="lastName"
-                      placeholder="Doe"
-                      name="lastName"
-                      value={values.lastName}
-                      onBlur={handleBlur}
-                      onChange={handleChange}
-                    />
-                    {errors.lastName && touched.lastName && (
-                      <ErrorMsg>{errors.lastName}</ErrorMsg>
-                    )}
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <label>Phone:</label>
-                    <ContactInput
-                      type="text"
-                      placeholder="(123) 123-4567"
-                      name="phone"
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                      value={values.phone}
-                    />
-                    {errors.phone && touched.phone && (
-                      <ErrorMsg>{errors.phone}</ErrorMsg>
-                    )}
-                  </td>
-                  <td>
-                    <label>Email:</label>
-                    <ContactInput
-                      type="text"
-                      placeholder="jane-doe@example.com"
-                      name="email"
-                      value={values.email}
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                    />
-                    {errors.email && touched.email && (
-                      <ErrorMsg>{errors.email}</ErrorMsg>
-                    )}
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <label>Message:</label>
-            <ContactTextArea
-              type="text"
-              onChange={handleChange}
-              name="msg"
-              row="5"
-              value={values.msg}
-              onBlur={handleBlur}
-            />
-            {errors.msg && touched.msg && <ErrorMsg>{errors.msg}</ErrorMsg>}
-            <br />
-            <ContactUsBtn type="submit">Submit</ContactUsBtn>
-          </ContactForm>
-        </ContactFormContainer>
-      </ContactContainer>
+                  {errors.firstName && touched.firstName && (
+                    <ErrorMsg>{errors.firstName}</ErrorMsg>
+                  )}
+                </td>
+                <td>
+                  <label htmlFor="lastName">Last Name:</label>
+                  <ContactInput
+                    type="text"
+                    id="lastName"
+                    placeholder="Doe"
+                    name="lastName"
+                    value={values.lastName}
+                    onBlur={handleBlur}
+                    onChange={handleChange}
+                  />
+                  {errors.lastName && touched.lastName && (
+                    <ErrorMsg>{errors.lastName}</ErrorMsg>
+                  )}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Phone:</label>
+                  <ContactInput
+                    type="text"
+                    placeholder="(123) 123-4567"
+                    name="phone"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.phone}
+                  />
+                  {errors.phone && touched.phone && (
+                    <ErrorMsg>{errors.phone}</ErrorMsg>
+                  )}
+                </td>
+                <td>
+                  <label>Email:</label>
+                  <ContactInput
+                    type="text"
+                    placeholder="jane-doe@example.com"
+                    name="email"
+                    value={values.email}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                  />
+                  {errors.email && touched.email && (
+                    <ErrorMsg>{errors.email}</ErrorMsg>
+                  )}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <label>Message:</label>
+          <ContactTextArea
+            type="text"
+            onChange={handleChange}
+            name="msg"
+            row="5"
+            value={values.msg}
+            onBlur={handleBlur}
+          />
+          {errors.msg && touched.msg && <ErrorMsg>{errors.msg}</ErrorMsg>}
+          <br />
+          <ContactUsBtn type="submit">Submit</ContactUsBtn>
+          <ContactCloseBtn style={{ marginLeft: "2em" }} onClick={props.click}>
+            Exit
+          </ContactCloseBtn>
+        </ContactForm>
+      </ContactFormContainer>
     </ContactBackground>
   );
 };

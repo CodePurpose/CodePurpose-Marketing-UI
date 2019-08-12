@@ -35,7 +35,6 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Marketing} />
             <Route exact path="/login" component={Login} />
-            <Route exact path="/ContactUs" component={ContactUs} />
             <PrivateRoute
               exact
               path="/admin"

@@ -1,10 +1,10 @@
-import React from "react";
+import React, { Component } from "react";
 import {
   FooterContainer,
   FooterBackground,
   List
 } from "../../StyledComponents";
-import { Link } from "react-router-dom";
+import ContactUs from "../ContactUs";
 
 const textPrimary = "#000000";
 
@@ -15,27 +15,43 @@ const styles = {
   }
 };
 
-const Footer = () => {
-  return (
-    <FooterBackground>
-      <FooterContainer>
-        <div style={styles.title}>
-          <p>CodePurpose</p>
-        </div>
-        <div style={{ display: "flex", color: `${textPrimary}` }}>
-          <List>
-            <li>
-              Contact:{" "}
-              <a href="mailto:admin@codepurpose.io">admin@codepurpose.io</a>
-            </li>
-            <li>
-              <Link to="/ContactUs">Contact Us</Link>
-            </li>
-          </List>
-        </div>
-      </FooterContainer>
-    </FooterBackground>
-  );
-};
+class Footer extends Component {
+  state = { modal: false };
+
+  modalToggleHandler = () => {
+    this.setState(prevState => {
+      return { modal: !prevState.modal };
+    });
+  };
+
+  render() {
+    const { modal } = this.state;
+    return (
+      <div>
+        {modal ? <ContactUs click={this.modalToggleHandler} /> : null}
+        <FooterBackground>
+          <FooterContainer>
+            <div style={styles.title}>
+              <p>CodePurpose</p>
+            </div>
+            <div style={{ display: "flex", color: `${textPrimary}` }}>
+              <List>
+                <li>
+                  Contact:{" "}
+                  <a href="mailto:admin@codepurpose.io">admin@codepurpose.io</a>
+                </li>
+                <li>
+                  <a to="/ContactUs" onClick={this.modalToggleHandler}>
+                    Contact Us
+                  </a>
+                </li>
+              </List>
+            </div>
+          </FooterContainer>
+        </FooterBackground>
+      </div>
+    );
+  }
+}
 
 export default Footer;

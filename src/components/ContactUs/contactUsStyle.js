@@ -5,19 +5,22 @@ const primaryLight = "#ffffff";
 const primaryDark = "#c7c7c7";
 const secondary = "#00bcd4";
 const secondaryDark = "#008ba3";
-const errorRed = "#e54e66";
+const red = "#e54e66";
+const redDark = "#b32940";
 // const black = "#212121";
 // const lighterBlack = "#666666";
 
 export const ContactBackground = styled.div`
-  background-color: ${primaryColor};
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  position: fixed;
+position fixed; 
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+z-index: 100;
+background-color: rgba(0, 0, 0, .3);
 `;
 
+//currently not in use
 export const ContactContainer = styled.div`
   max-width: 1320px;
   margin-left: auto;
@@ -28,7 +31,12 @@ export const ContactContainer = styled.div`
   }
 `;
 
+export const ContactUsTitle = styled.h1`
+  margin-top: 0;
+`;
+
 export const ContactFormContainer = styled.div`
+  z-index: 200;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
@@ -73,7 +81,7 @@ border-color: ${primaryDark}
 `;
 
 export const ErrorMsg = styled.div`
-  color: ${errorRed};
+  color: ${red};
   margin-bottom: 1rem;
 `;
 
@@ -91,4 +99,20 @@ box-shadow: 0 24px 48px -10px rgba(0, 188, 212, 0.35);
  :hover {
   cursor: pointer;
   background-color: ${secondaryDark};
+  `;
+
+export const ContactCloseBtn = styled.button`
+background-color: ${red};
+width: 100px;
+color: white;
+border: none;
+border-radius: 5px;
+padding: 1em;
+margin-left: 1rem;
+-webkit-transition-duration: 0.4s;
+transition-duration: 0.4s;
+box-shadow: 0 24px 48px -10px rgba(229, 78, 102, 0.35);
+ :hover {
+  cursor: pointer;
+  background-color: ${redDark};
   `;
