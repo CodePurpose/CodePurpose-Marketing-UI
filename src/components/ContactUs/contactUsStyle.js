@@ -18,7 +18,17 @@ export const ContactBackground = styled.div`
   position: fixed;
 `;
 
-export const ContactForm = styled.form`
+export const ContactContainer = styled.div`
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: 480px) {
+    text-align: center;
+  }
+`;
+
+export const ContactFormContainer = styled.div`
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
@@ -38,13 +48,17 @@ export const ContactForm = styled.form`
   }
 `;
 
+export const ContactForm = styled.form`
+  width: 100%;
+`;
+
 export const ContactInput = styled.input`
-  margin: 8px 8px;
+  margin: 8px 0;
   padding: 0.5em 1em;
   border-radius: 5px;
   border: 1px solid ${primaryDark}
   box-sizing: border-box;
-  width: 100%;
+  width: 100%
 `;
 
 export const ContactTextArea = styled.textarea`
@@ -53,7 +67,7 @@ width: 100%
 height: 150px;
 box-sizing: border-box;
 
-padding: 0.5em 1em;
+padding: 1em;
 border-radius: 6px;
 border-color: ${primaryDark}
 `;
