@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const primaryColor = "#fafafa";
+// const primaryColor = "#fafafa";
 const primaryLight = "#ffffff";
 const primaryDark = "#c7c7c7";
 const secondary = "#00bcd4";
@@ -92,7 +92,8 @@ color: white;
 border: none;
 border-radius: 5px;
 padding: 1em;
-margin-top: 1rem;
+margin-top: 1em;
+margin-right: 1em
 -webkit-transition-duration: 0.4s;
 transition-duration: 0.4s;
 box-shadow: 0 24px 48px -10px rgba(0, 188, 212, 0.35);
@@ -108,7 +109,6 @@ color: white;
 border: none;
 border-radius: 5px;
 padding: 1em;
-margin-left: 1rem;
 -webkit-transition-duration: 0.4s;
 transition-duration: 0.4s;
 box-shadow: 0 24px 48px -10px rgba(229, 78, 102, 0.35);

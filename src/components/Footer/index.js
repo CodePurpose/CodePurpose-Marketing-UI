@@ -41,9 +41,7 @@ class Footer extends Component {
                   <a href="mailto:admin@codepurpose.io">admin@codepurpose.io</a>
                 </li>
                 <li>
-                  <a to="/ContactUs" onClick={this.modalToggleHandler}>
-                    Contact Us
-                  </a>
+                  <div onClick={this.modalToggleHandler}>Contact Us</div>
                 </li>
               </List>
             </div>

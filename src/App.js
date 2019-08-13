@@ -9,7 +9,6 @@ import { withFirebase } from "./components/Firebase";
 import Login from "./screens/login";
 import Admin from "./screens/admin";
 import Marketing from "./screens/marketing";
-import ContactUs from "./components/ContactUs";
 
 class App extends Component {
   state = {
