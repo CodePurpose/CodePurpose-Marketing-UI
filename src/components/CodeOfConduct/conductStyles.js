@@ -43,6 +43,7 @@ export const ConductContent = styled.div`
 
 export const ConductCloseBtn = styled.button`
   background-color: ${secondary};
+  color: white;
   border: none;
   border-radius: 5px;
   padding: 1em 2em;
