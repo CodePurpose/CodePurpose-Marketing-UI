@@ -283,43 +283,6 @@ export const AboutUsText = styled.p`
   margin-top: 0;
 `;
 
-//Careers Styles ************************************************
-
-export const CareersBackground = styled.div`
-  background: ${primary};
-  padding-bottom: 2em;
-`;
-
-export const CareersContainer = styled.div`
-  max-width: 1320px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-`;
-
-export const CareersHeader = styled.h1`
-  color: ${secondary};
-`;
-
-export const CareersHeaderTwo = styled.h3`
-  color: ${black};
-  margin-top: 0;
-`;
-
-export const CareersTextContainer = styled.div`
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  align-self: center;
-`;
-
-export const CareersText = styled.p`
-  color: ${lighterBlack};
-  margin-top: 0;
-`;
-
 //Discussion Styles *************************************************
 
 export const DiscussionBackground = styled.div`
