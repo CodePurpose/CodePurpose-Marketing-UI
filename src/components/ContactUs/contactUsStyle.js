@@ -7,7 +7,7 @@ const secondary = "#00bcd4";
 const secondaryDark = "#008ba3";
 const red = "#e54e66";
 const redDark = "#b32940";
-// const black = "#212121";
+const black = "#212121";
 // const lighterBlack = "#666666";
 
 export const ContactBackground = styled.div`
@@ -20,19 +20,11 @@ z-index: 100;
 background-color: rgba(0, 0, 0, .3);
 `;
 
-//currently not in use
-export const ContactContainer = styled.div`
-  max-width: 1320px;
-  margin-left: auto;
-  margin-right: auto;
-
-  @media (max-width: 480px) {
-    text-align: center;
-  }
-`;
-
 export const ContactUsTitle = styled.h1`
   margin-top: 0;
+  margin-bottom: 1em;
+  text-align: center;
+  color: ${black};
 `;
 
 export const ContactFormContainer = styled.div`
@@ -42,7 +34,7 @@ export const ContactFormContainer = styled.div`
   margin-right: auto;
   margin-top: 150px;
   background-color: ${primaryLight};
-  padding: 4rem;
+  padding: 3rem;
   border-radius: 8px;
 
   -webkit-box-shadow: 12px 23px 35px -10px rgba(0, 0, 0, 0.31);
@@ -50,9 +42,8 @@ export const ContactFormContainer = styled.div`
   box-shadow: 12px 23px 35px -10px rgba(0, 0, 0, 0.31);
 
   @media (max-width: 480px) {
-    padding: 3rem 1rem;
+    padding: 3rem 0.5rem;
     margin-top: 100px;
-    marign-bottom: 50px;
   }
 `;
 
@@ -116,3 +107,7 @@ box-shadow: 0 24px 48px -10px rgba(229, 78, 102, 0.35);
   cursor: pointer;
   background-color: ${redDark};
   `;
+
+export const ContactUsTable = styled.table`
+  width: 100%;
+`;

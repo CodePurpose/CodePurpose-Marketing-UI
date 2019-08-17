@@ -9,7 +9,8 @@ import {
   ContactUsBtn,
   ContactFormContainer,
   ContactUsTitle,
-  ContactCloseBtn
+  ContactCloseBtn,
+  ContactUsTable
 } from "./contactUsStyle";
 import SubmitConfirm from "./submitConfirm";
 
@@ -33,7 +34,7 @@ const ContactUs = props => {
           <div>
             <ContactUsTitle>Contact Us</ContactUsTitle>
             <ContactForm onSubmit={handleSubmit}>
-              <table style={{ width: "100%" }}>
+              <ContactUsTable>
                 <tbody>
                   <tr>
                     <td>
@@ -70,9 +71,10 @@ const ContactUs = props => {
                   </tr>
                   <tr>
                     <td>
-                      <label>Phone:</label>
+                      <label htmlFor="phone">Phone:</label>
                       <ContactInput
                         type="text"
+                        id="phone"
                         placeholder="(123) 123-4567"
                         name="phone"
                         onChange={handleChange}
@@ -84,9 +86,10 @@ const ContactUs = props => {
                       )}
                     </td>
                     <td>
-                      <label>Email:</label>
+                      <label htmlFor="email">Email:</label>
                       <ContactInput
                         type="text"
+                        id="email"
                         placeholder="jane-doe@example.com"
                         name="email"
                         value={values.email}
@@ -99,10 +102,11 @@ const ContactUs = props => {
                     </td>
                   </tr>
                 </tbody>
-              </table>
-              <label>Message:</label>
+              </ContactUsTable>
+              <label htmlFor="message">Message:</label>
               <ContactTextArea
                 type="text"
+                id="message"
                 onChange={handleChange}
                 name="msg"
                 row="5"
@@ -112,12 +116,7 @@ const ContactUs = props => {
               {errors.msg && touched.msg && <ErrorMsg>{errors.msg}</ErrorMsg>}
               <br />
               <ContactUsBtn type="submit">Submit</ContactUsBtn>
-              <ContactCloseBtn
-                style={{ marginLeft: "2em" }}
-                onClick={props.click}
-              >
-                Exit
-              </ContactCloseBtn>
+              <ContactCloseBtn onClick={props.click}>Exit</ContactCloseBtn>
             </ContactForm>
           </div>
         )}

@@ -136,60 +136,6 @@ export const MenuItem = styled(Link)`
   }
 `;
 
-// Footer styles*****************************
-
-export const FooterBackground = styled.div`
-  background: ${primaryLight};
-  height: 175px;
-
-  @media (min-width: 320px) and (max-width: 480px) {
-    height: 250px;
-  }
-`;
-
-export const FooterContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-
-  @media (min-width: 320px) and (max-width: 480px) {
-    display: flex;
-    flex-direction: column;
-    margin-left: 1em;
-    margin-right: 1em;
-  }
-`;
-
-export const FooterList = styled.div`
-  display: flex;
-  color: white;
-`;
-
-export const List = styled.ul`
-  list-style: none;
-  padding-top: 2em;
-
-  @media (min-width: 320px) and (max-width: 480px) {
-    margin: 0;
-    padding-top: 0em;
-    padding-bottom: 1em;
-  }
-`;
-export const Item = styled.a`
-  text-decoration: none;
-  color: ${black}};
-  font-size: 1rem;
-
-  :hover {
-    color: ${secondary};
-  }
-
-  :active {
-    color: ${secondary};
-  }
-`;
 //Containers***********************************
 
 export const Container = styled.div`

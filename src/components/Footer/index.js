@@ -2,18 +2,11 @@ import React, { Component } from "react";
 import {
   FooterContainer,
   FooterBackground,
-  List
-} from "../../StyledComponents";
+  FooterUl,
+  FooterItem,
+  FooterTitle
+} from "./footerStyle";
 import ContactUs from "../ContactUs";
-
-const textPrimary = "#000000";
-
-const styles = {
-  title: {
-    fontSize: "2em",
-    color: `${textPrimary}`
-  }
-};
 
 class Footer extends Component {
   state = { modal: false };
@@ -31,20 +24,18 @@ class Footer extends Component {
         {modal ? <ContactUs click={this.modalToggleHandler} /> : null}
         <FooterBackground>
           <FooterContainer>
-            <div style={styles.title}>
-              <p>CodePurpose</p>
-            </div>
-            <div style={{ display: "flex", color: `${textPrimary}` }}>
-              <List>
-                <li>
-                  Contact:{" "}
-                  <a href="mailto:admin@codepurpose.io">admin@codepurpose.io</a>
-                </li>
-                <li>
-                  <div onClick={this.modalToggleHandler}>Contact Us</div>
-                </li>
-              </List>
-            </div>
+            <FooterTitle>CodePurpose</FooterTitle>
+            <FooterUl>
+              <li>
+                <FooterItem onClick={this.modalToggleHandler}>
+                  Contact Us
+                </FooterItem>
+              </li>
+              <li>
+                Email:{" "}
+                <a href="mailto:admin@codepurpose.io">admin@codepurpose.io</a>
+              </li>
+            </FooterUl>
           </FooterContainer>
         </FooterBackground>
       </div>
