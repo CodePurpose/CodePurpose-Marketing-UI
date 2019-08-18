@@ -31,10 +31,6 @@ class Footer extends Component {
                   Contact Us
                 </FooterItem>
               </li>
-              <li>
-                Email:{" "}
-                <a href="mailto:admin@codepurpose.io">admin@codepurpose.io</a>
-              </li>
             </FooterUl>
           </FooterContainer>
         </FooterBackground>

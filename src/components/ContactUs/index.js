@@ -173,8 +173,9 @@ const EnhancedWithFormik = withFormik({
         data = `${data} \`${key}\`: ${values[key]}`;
       }
       const body = JSON.stringify({ text: data });
-      const url =
-        "https://hooks.slack.com/services/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";
+      const url = `${process.env.REACT_APP_SLACK_HOOK}`;
+
+      debugger;
       fetch(url, {
         method: "POST",
         headers: {

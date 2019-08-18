@@ -8,7 +8,7 @@ const secondaryDark = "#008ba3";
 const red = "#e54e66";
 const redDark = "#b32940";
 const black = "#212121";
-// const lighterBlack = "#666666";
+const lighterBlack = "#666666";
 
 export const ContactBackground = styled.div`
 position fixed; 
@@ -110,4 +110,8 @@ box-shadow: 0 24px 48px -10px rgba(229, 78, 102, 0.35);
 
 export const ContactUsTable = styled.table`
   width: 100%;
+`;
+
+export const ConfirmSecondaryTxt = styled.p`
+  color: ${lighterBlack};
 `;

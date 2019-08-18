@@ -4,6 +4,7 @@ import styled from "styled-components";
 const primaryLight = "#ffffff";
 const secondary = "#00bcd4";
 const black = "#212121";
+const secondaryDark = "#008ba3";
 
 export const FooterBackground = styled.div`
   background: ${primaryLight};
@@ -45,9 +46,10 @@ export const FooterUl = styled.ul`
   }
 `;
 export const FooterItem = styled.p`
-  text-decoration: none;
+  text-decoration: underline;
   font-size: 1rem;
   margin-top: 0;
+  color: ${secondaryDark}
 
   :hover {
     color: ${secondary};
