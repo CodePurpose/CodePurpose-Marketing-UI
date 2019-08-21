@@ -136,12 +136,12 @@ const EnhancedWithFormik = withFormik({
 
   validate: values => {
     const errors = {};
+    const isEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+    const isPhoneNumber = /^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$/;
 
     if (!values.email) {
       errors.email = "Required";
-    } else if (
-      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
-    ) {
+    } else if (!isEmail.test(values.email)) {
       errors.email = "Invalid email address";
     }
 
@@ -155,7 +155,7 @@ const EnhancedWithFormik = withFormik({
 
     if (!values.phone) {
       errors.phone = "Required";
-    } else if (!/^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$/.test(values.phone)) {
+    } else if (!isPhoneNumber.test(values.phone)) {
       errors.phone = "Invalid number";
     }
 
