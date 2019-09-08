@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import discussion from "./images/discussion.jpg";
 import computer from "./images/computer.jpg";
 import backgroundOne from "./images/backgroundOne.jpg";
-import { HashLink as Link } from "react-router-hash-link";
 
 // colors*********************************
 const primary = "#fafafa";
@@ -22,87 +21,8 @@ export const TextContainer = styled.div`
   margin-left: auto;
   margin-right: auto;
 `;
-//NavBar**********************************
-export const Nav = styled.nav`
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 60px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  z-index: 1;
-  color: ${black};
-  background: ${primary};
-  box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.5);
-`;
 
-export const NavTitle = styled.p`
-  align-self: center;
-  font-size: 2rem;
-  margin-left: 2rem;
-`;
-
-export const NavItems = styled.ul`
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  margin-right: 2rem;
-
-  @media (min-width: 320px) and (max-width: 480px) {
-    display: none;
-  }
-`;
-
-export const NavLinks = styled(Link)`
-  text-decoration: none;
-  color: ${black};
-  font-size: 1rem;
-  padding-left: 10px;
-
-  :hover {
-    color: ${secondary};
-  }
-
-  :active {
-    color: ${secondary};
-  }
-`;
-
-export const MenuIcon = styled.a`
-  align-self: center;
-  margin-right: 1em;
-  text-decoration: none;
-  color: ${black};
-  :active {
-    color: ${secondary};
-  }
-  @media (min-width: 480px) {
-    display: none;
-  }
-`;
-
-export const MobileMenu = styled.div`
-  height: 250px;
-  box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.5);
-  background: ${primary};
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 200;
-  transform: translateY(-105%);
-  transition: transform 0.3s ease-out;
-
-  ${props =>
-    props.open
-      ? `
-      transform: translateY(0);
-    `
-      : null}
-`;
-
+//Backdrop********************************
 export const BackdropStyle = styled.div`
   position: fixed;
   width: 100%;
@@ -111,29 +31,6 @@ export const BackdropStyle = styled.div`
   left: 0;
   background: rgba(0, 0, 0, 0.3);
   z-index: 100;
-`;
-
-export const MenuList = styled.li`
-  padding-top: 0.5em;
-`;
-
-export const MenuUL = styled.ul`
-  list-style: none;
-  text-align: center;
-  padding-left: 0;
-`;
-
-export const MenuItem = styled(Link)`
-  text-decoration: none;
-  color: ${black};
-  font-size: 1.5em;
-  :hover {
-    color: ${secondary};
-  }
-
-  :active {
-    color: ${secondary};
-  }
 `;
 
 //Containers***********************************
