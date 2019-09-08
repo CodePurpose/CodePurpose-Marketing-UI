@@ -35,7 +35,7 @@ export const ContactFormContainer = styled.div`
   margin-top: 150px;
   background-color: ${primaryLight};
   padding: 3rem;
-  border-radius: 8px;
+  border-radius: 6px;
 
   -webkit-box-shadow: 12px 23px 35px -10px rgba(0, 0, 0, 0.31);
   -moz-box-shadow: 12px 23px 35px -10px rgba(0, 0, 0, 0.31);

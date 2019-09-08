@@ -14,6 +14,24 @@ import {
 } from "./contactUsStyle";
 import SubmitConfirm from "./submitConfirm";
 
+function sendToSlack(values) {
+  let data = "";
+  for (let key in values) {
+    data = `${data} \`${key}\`: ${values[key]}`;
+  }
+  const body = JSON.stringify({ text: data });
+  const url = `${process.env.REACT_APP_SLACK_HOOK}`;
+
+  fetch(url, {
+    method: "POST",
+    headers: {
+      // using 'application/json' here fails to handle CORS preflight 'options' request as it should on frontend JavaScript code used 'application/x-www-form-urlencoded' https://stackoverflow.com/questions/45752537/slack-incoming-webhook-request-header-field-content-type-is-not-allowed-by-acce
+      "Content-Type": "application/x-www-form-urlencoded"
+    },
+    body: body
+  });
+}
+
 const ContactUs = props => {
   const {
     values,
@@ -167,26 +185,7 @@ const EnhancedWithFormik = withFormik({
   },
 
   handleSubmit: values => {
-    setTimeout(() => {
-      let data = "";
-      for (let key in values) {
-        data = `${data} \`${key}\`: ${values[key]}`;
-      }
-      const body = JSON.stringify({ text: data });
-      const url = `${process.env.REACT_APP_SLACK_HOOK}`;
-
-      debugger;
-      fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded"
-        },
-        body: body
-      })
-        .then(res => res.json())
-        .then(response => console.log("Success:", JSON.stringify(response)))
-        .catch(error => console.error("Error:", error));
-    }, 1000);
+    sendToSlack(values);
   },
 
   displayName: "ContactForm"
