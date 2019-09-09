@@ -1,22 +1,26 @@
 import React, { Component } from "react";
-import {
-  Nav,
-  NavItems,
-  NavLinks,
-  NavTitle,
-  MenuIcon
-} from "../../StyledComponents";
+import { Nav, NavItems, NavLinks, NavTitle, MenuIcon } from "./navBarStyle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAlignJustify } from "@fortawesome/free-solid-svg-icons";
 import NavMobileMenu from "../NavMobileMenu";
 import Backdrop from "../Backdrop";
+import ContactUs from "../ContactUs/index";
 
 class NavBar extends Component {
-  state = { mobileMenuOpen: false };
+  state = { mobileMenuOpen: false, contactUsModal: false };
 
   menuToggleHandler = () => {
     this.setState(prevState => {
       return { mobileMenuOpen: !prevState.mobileMenuOpen };
+    });
+  };
+
+  contactUsModalHandler = () => {
+    this.setState(prevState => {
+      return {
+        contactUsModal: !prevState.contactUsModal,
+        mobileMenuOpen: false
+      };
     });
   };
 
@@ -25,7 +29,7 @@ class NavBar extends Component {
   };
 
   render() {
-    const { mobileMenuOpen } = this.state;
+    const { mobileMenuOpen, contactUsModal } = this.state;
     return (
       <div>
         <Nav>
@@ -51,18 +55,25 @@ class NavBar extends Component {
                 Careers
               </NavLinks>
             </li>
-            {/* 
-            Will add when contact form is ready.
             <li>
-              <NavLinks to="/">Contact</NavLinks>
-            </li> */}
+              <NavLinks to="" onClick={this.contactUsModalHandler}>
+                Contact
+              </NavLinks>
+            </li>
           </NavItems>
           <MenuIcon onClick={this.menuToggleHandler}>
             <FontAwesomeIcon icon={faAlignJustify} size="2x" />
           </MenuIcon>
         </Nav>
-        <NavMobileMenu open={mobileMenuOpen} />
+        <NavMobileMenu
+          open={mobileMenuOpen}
+          click={this.menuToggleHandler}
+          contactUsModal={this.contactUsModalHandler}
+        />
         {mobileMenuOpen ? <Backdrop click={this.backdropHandler} /> : null}
+        {contactUsModal ? (
+          <ContactUs click={this.contactUsModalHandler} />
+        ) : null}
       </div>
     );
   }

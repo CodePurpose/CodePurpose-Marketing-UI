@@ -1,37 +1,42 @@
-import React from "react";
+import React, { Component } from "react";
 import {
   FooterContainer,
   FooterBackground,
-  List
-} from "../../StyledComponents";
+  FooterUl,
+  FooterItem,
+  FooterTitle
+} from "./footerStyle";
+import ContactUs from "../ContactUs";
 
-const textPrimary = "#000000";
+class Footer extends Component {
+  state = { modal: false };
 
-const styles = {
-  title: {
-    fontSize: "2em",
-    color: `${textPrimary}`
+  modalToggleHandler = () => {
+    this.setState(prevState => {
+      return { modal: !prevState.modal };
+    });
+  };
+
+  render() {
+    const { modal } = this.state;
+    return (
+      <div>
+        {modal ? <ContactUs click={this.modalToggleHandler} /> : null}
+        <FooterBackground>
+          <FooterContainer>
+            <FooterTitle>CodePurpose</FooterTitle>
+            <FooterUl>
+              <li>
+                <FooterItem onClick={this.modalToggleHandler}>
+                  Contact Us
+                </FooterItem>
+              </li>
+            </FooterUl>
+          </FooterContainer>
+        </FooterBackground>
+      </div>
+    );
   }
-};
-
-const Footer = () => {
-  return (
-    <FooterBackground>
-      <FooterContainer>
-        <div style={styles.title}>
-          <p>CodePurpose</p>
-        </div>
-        <div style={{ display: "flex", color: `${textPrimary}` }}>
-          <List>
-            <li>
-              Contact:{" "}
-              <a href="mailto:admin@codepurpose.io">admin@codepurpose.io</a>
-            </li>
-          </List>
-        </div>
-      </FooterContainer>
-    </FooterBackground>
-  );
-};
+}
 
 export default Footer;
