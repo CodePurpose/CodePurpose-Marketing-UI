@@ -17,7 +17,7 @@ import SubmitConfirm from "./submitConfirm";
 function sendToSlack(values) {
   let data = "";
   for (let key in values) {
-    data = `${data} \`${key}\`: ${values[key]}`;
+    data = `${data} ${key}: \`${values[key]}\``;
   }
   const body = JSON.stringify({ text: data });
   const url = `${process.env.REACT_APP_SLACK_HOOK}`;
